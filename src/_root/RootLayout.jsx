@@ -14,7 +14,7 @@ const RootLayout = () => {
         {/* <LeftSidebar /> */}
         {/* <ThemeSwitch /> */}
 
-        <section className="flex flex-1 h-full">
+        <section>
           <Outlet />
         </section>
 

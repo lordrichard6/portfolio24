@@ -5,3 +5,7 @@
 .flex-centered {
   @apply flex justify-center items-center;
 }
+
+.section-y-short {
+  @apply min-h-screen lg:min-h-[80vh];
+}

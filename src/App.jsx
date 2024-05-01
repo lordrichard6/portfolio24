@@ -27,7 +27,7 @@ function App() {
 
   return (
     <ThemeProvider value={{themeMode, darkTheme,lightTheme}}>
-      <main className='flex h-screen'>
+      <main className='w-screen overflow-hidden'>
         <Routes>
           <Route element={<RootLayout />}>
             <Route index element={<Home />} />

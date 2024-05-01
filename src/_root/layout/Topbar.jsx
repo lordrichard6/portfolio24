@@ -48,6 +48,9 @@ const Topbar = () => {
     return (
         <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
+                <div className="">
+                <img className='w-20 invert dark:invert-0' src="/src/assets/images/logo_white.png" alt="" />
+                </div>
                 <div className="menu-burger flex-centered">
                     <CgMenuBoxed className="lg:hidden text-5xl" />
                 </div>
