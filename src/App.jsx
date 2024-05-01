@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import RootLayout from './_root/RootLayout'
-import { Home } from './_root/pages'
+import { About, Contact, Home, Projects } from './_root/pages'
 import { ThemeProvider } from './context/ThemeContext'
 
 import './styles/globals.scss';
@@ -27,10 +27,13 @@ function App() {
 
   return (
     <ThemeProvider value={{themeMode, darkTheme,lightTheme}}>
-      <main className='w-screen overflow-hidden'>
+      <main>
         <Routes>
           <Route element={<RootLayout />}>
             <Route index element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </main>

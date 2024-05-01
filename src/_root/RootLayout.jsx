@@ -9,14 +9,14 @@ const RootLayout = () => {
 
   return (
     <>
-      <div className={`main-container w-full md:flex relative light-background dark-background`}>
+      <div className={`main-container relative light-background dark-background`}>
         <Topbar />
         {/* <LeftSidebar /> */}
         {/* <ThemeSwitch /> */}
 
-        <section>
+        <main className='flex-centered flex-col'>
           <Outlet />
-        </section>
+        </main>
 
         {/* <Bottombar /> */}
       </div>

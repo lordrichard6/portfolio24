@@ -24,7 +24,7 @@ export default {
         'red': '#FF5A5A',
         'dark-1': '#000000',
         'dark-2': '#09090A',
-        'dark-3': '#101012',
+        'dark-3': '#2F3349',
         'dark-4': '#1F1F22',
         'light-1': '#FFFFFF',
         'light-2': '#EFEFEF',

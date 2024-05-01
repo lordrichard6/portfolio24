@@ -9,3 +9,40 @@
 .section-y-short {
   @apply min-h-screen lg:min-h-[80vh];
 }
+
+html
+h1, h2, h3, h4, p {
+  @apply text-dark-3 dark:text-light-1;
+}
+
+h1 {
+  @apply text-[96px] font-extrabold;
+}
+
+h2 {
+  @apply text-[56px] font-extrabold;
+}
+
+p {
+  @apply text-[24px] font-light;
+}
+
+button {
+  @apply text-dark-3 dark:text-light-1;
+}
+
+.btn-primary {
+  @apply text-3xl font-bold px-[76px] py-[24px] bg-[#E1AFD1] dark:bg-[#BC7FCD] rounded-lg mx-4;
+}
+
+.btn-project {
+  @apply text-2xl font-bold px-[16px] py-[8px] bg-[#C4E4FF] dark:bg-[#1679AB] rounded-lg mx-4;
+}
+
+.btn-social {
+  @apply flex-centered w-[68px] h-[68px] bg-[#E1AFD1] dark:bg-[#BC7FCD] rounded-lg mx-4;
+
+  svg {
+    @apply w-[28px] h-[28px];
+  }
+}

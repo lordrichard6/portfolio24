@@ -30,7 +30,8 @@ html {
   -webkit-text-size-adjust: none;
   /* for iOS Safari */
   text-size-adjust: none;
-  /* for other mobile browsers */
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -490,4 +491,52 @@ html {
 }
 .signature {
   filter: drop-shadow(0px 0px 10px #34b3c1);
+}
+
+// WHO AM I
+.who-am-i {
+  .clipped-bg {
+    background-image: url('/src/assets/images/test-light.jpg');
+    // clip-path: polygon(100% 20%, 100% 60%, 0 80%, 0 40%);
+    clip-path: circle(33.3% at 93% 49%);
+    background-attachment: fixed;
+    @apply bg-cover  absolute w-screen h-full z-0 blur-sm;
+    &.second {
+      clip-path: circle(23.4% at 5% 63%);
+    }
+  }
+}
+.dark {
+  .who-am-i {
+    .clipped-bg {
+      background-image: url('/src/assets/images/test-dark.jpg');
+    }
+  }
+}
+
+// FEATURED PROJECTS
+.featured-projects {
+  .clipped-bg {
+    background-image: url('/src/assets/images/test-light.jpg');
+    clip-path: polygon(100% 40%, 100% 80%, 0 60%, 0 20%);
+    background-attachment: fixed;
+    @apply bg-cover  absolute top-0 w-screen h-1/3 z-0 blur-sm opacity-30;
+
+    &.second {
+      clip-path: polygon(100% 20%, 100% 60%, 0 80%, 0 40%);
+      @apply top-[35%];
+    }
+
+    &.third {
+      clip-path: polygon(100% 40%, 100% 80%, 0 60%, 0 20%);
+      @apply top-auto bottom-0;
+    }
+  }
+}
+.dark {
+  .featured-projects {
+    .clipped-bg {
+      background-image: url('/src/assets/images/test-dark.jpg');
+    }
+  }
 }
