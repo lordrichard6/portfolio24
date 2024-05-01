@@ -10,8 +10,11 @@
   @apply min-h-screen lg:min-h-[80vh];
 }
 
-html
-h1, h2, h3, h4, p {
+html h1,
+h2,
+h3,
+h4,
+p {
   @apply text-dark-3 dark:text-light-1;
 }
 
@@ -21,6 +24,10 @@ h1 {
 
 h2 {
   @apply text-[56px] font-extrabold;
+}
+
+h3 {
+  @apply text-[32px] font-bold;
 }
 
 p {
@@ -37,12 +44,29 @@ button {
 
 .btn-project {
   @apply text-2xl font-bold px-[16px] py-[8px] bg-[#C4E4FF] dark:bg-[#1679AB] rounded-lg mx-4;
+
+  &.pink {
+    @apply bg-[#E1AFD1] dark:bg-[#BC7FCD];
+  }
 }
 
 .btn-social {
-  @apply flex-centered w-[68px] h-[68px] bg-[#E1AFD1] dark:bg-[#BC7FCD] rounded-lg mx-4;
+  @apply flex-centered w-[68px] h-[68px] bg-[#C4E4FF] dark:bg-[#1679AB] rounded-lg mx-4;
 
   svg {
     @apply w-[28px] h-[28px];
   }
+  &.pink {
+    @apply bg-[#E1AFD1] dark:bg-[#BC7FCD];
+  }
+  &.small {
+    @apply w-[36px] h-[36px];
+    svg {
+      @apply w-[18px] h-[18px];
+    }
+  }
+}
+
+.btn-tag {
+  @apply text-[32px] font-bold bg-[#FFCBCB] dark:bg-[#ff9797] px-8 py-4 rounded-lg;
 }
