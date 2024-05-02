@@ -14,24 +14,29 @@ html h1,
 h2,
 h3,
 h4,
-p {
+p,
+span {
   @apply text-dark-3 dark:text-light-1;
 }
 
 h1 {
-  @apply text-[96px] font-extrabold;
+  @apply text-6xl lg:text-[96px] font-extrabold;
 }
 
 h2 {
-  @apply text-[56px] font-extrabold;
+  @apply text-4xl lg:text-[56px] font-extrabold;
 }
 
 h3 {
-  @apply text-[32px] font-bold;
+  @apply lg:text-[32px] font-bold;
+}
+
+h4 {
+  @apply lg:text-[24px] font-bold;
 }
 
 p {
-  @apply text-[24px] font-light;
+  @apply lg:text-[24px] font-light;
 }
 
 button {
@@ -39,25 +44,31 @@ button {
 }
 
 .btn-primary {
-  @apply text-3xl font-bold px-[76px] py-[24px] bg-[#E1AFD1] dark:bg-[#BC7FCD] rounded-lg mx-4;
+  @apply text-2xl font-bold px-8 py-4 lg:px-[76px] lg:py-[24px] bg-[#E1AFD1] dark:bg-[#5D1176] rounded-lg mx-4;
 }
 
-.btn-project {
-  @apply text-2xl font-bold px-[16px] py-[8px] bg-[#C4E4FF] dark:bg-[#1679AB] rounded-lg mx-4;
+.btn-small {
+  @apply text-2xl font-bold px-[16px] py-[8px] rounded-lg mx-4;
 
   &.pink {
-    @apply bg-[#E1AFD1] dark:bg-[#BC7FCD];
+    @apply bg-[#E1AFD1] dark:bg-[#5D1176];
+  }
+  &.blue {
+    @apply bg-[#C4E4FF] dark:bg-[#1679AB];
   }
 }
 
 .btn-social {
-  @apply flex-centered w-[68px] h-[68px] bg-[#C4E4FF] dark:bg-[#1679AB] rounded-lg mx-4;
+  @apply flex-centered p-4 lg:w-[68px] lg:h-[68px] rounded-lg mx-4;
 
   svg {
-    @apply w-[28px] h-[28px];
+    @apply w-[20px] h-[20px] lg:w-[28px] lg:h-[28px];
   }
   &.pink {
-    @apply bg-[#E1AFD1] dark:bg-[#BC7FCD];
+    @apply bg-[#E1AFD1] dark:bg-[#5D1176];
+  }
+  &.blue {
+    @apply bg-[#C4E4FF] dark:bg-[#1679AB];
   }
   &.small {
     @apply w-[36px] h-[36px];
@@ -68,5 +79,5 @@ button {
 }
 
 .btn-tag {
-  @apply text-[32px] font-bold bg-[#FFCBCB] dark:bg-[#ff9797] px-8 py-4 rounded-lg;
+  @apply text-[32px] font-bold bg-[#C4E4FF] dark:bg-[#00224D] px-8 py-4 rounded-lg;
 }

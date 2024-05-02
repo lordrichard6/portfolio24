@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { Outlet } from 'react-router-dom'
 
 import Topbar from './layout/Topbar'
-import { ThemeSwitch } from './layout/ThemeSwitch';
+import Bottombar from './layout/Bottombar';
 
 
 const RootLayout = () => {
@@ -12,13 +11,12 @@ const RootLayout = () => {
       <div className={`main-container relative light-background dark-background`}>
         <Topbar />
         {/* <LeftSidebar /> */}
-        {/* <ThemeSwitch /> */}
 
         <main className='flex-centered flex-col'>
           <Outlet />
         </main>
 
-        {/* <Bottombar /> */}
+        <Bottombar />
       </div>
     </>
   )
