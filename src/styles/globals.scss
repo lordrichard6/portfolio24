@@ -515,7 +515,9 @@ html {
     background-image: url("/src/assets/images/test-light.jpg");
     // clip-path: polygon(100% 20%, 100% 60%, 0 80%, 0 40%);
     clip-path: circle(33.3% at 93% 49%);
+    -webkit-clip-path: circle(33.3% at 93% 49%);
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     @apply bg-cover  absolute w-screen h-full z-0 blur-sm;
     &.second {
       clip-path: circle(23.4% at 5% 63%);
@@ -536,6 +538,7 @@ html {
     background-image: url("/src/assets/images/test-light.jpg");
     clip-path: polygon(100% 40%, 100% 80%, 0 60%, 0 20%);
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     @apply bg-cover absolute top-0 w-screen h-1/3 z-0 blur-sm opacity-30;
 
     &.second {
