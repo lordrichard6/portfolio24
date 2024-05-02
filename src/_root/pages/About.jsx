@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <header id="top" className='about-header max-h-screen min-h-screen w-full relative'>
-        <h1 className='text-[220px] absolute top-[20%] z-10'>About</h1>
+        <h1 className='massive-text absolute top-[20%] z-10'>About</h1>
         <div className="dark:hidden">
           {/* <img className='object-cover w-screen h-full absolute top-0 z-0' src="/src/assets/images/h-about-full.png" alt="" /> */}
           <img className='object-cover w-screen h-auto absolute bottom-0 z-20' src="/src/assets/images/h-about-blur.png" alt="" />
@@ -19,12 +19,13 @@ const About = () => {
           <img className='object-cover w-screen h-auto absolute bottom-0 z-20' src="/src/assets/images/h-about-sand-dark.png" alt="" />
         </div>
       </header>
+
       <section className="partners relative flex-centered flex-col w-full">
         <img className='object-cover dark:hidden w-screen h-full top-0 z-0' src="/src/assets/images/h-about-upside.png" alt="" />
         <img className='object-cover hidden dark:block w-screen h-full top-0 z-0' src="/src/assets/images/h-about-upside-dark.png" alt="" />
         <div className="fading absolute w-screen h-full top-0 z-0" />
         <h2 className='z-10'>Learning with the best!</h2>
-        <div className="z-20 grid grid-rows-2 grid-flow-col gap-20 items-center mb-40">
+        <div className="z-20 grid grid-rows-2 grid-flow-col gap-10 lg:gap-20 items-center mb-20 lg:mb-40">
           <img className='object-cover dark:invert w-[200px]' src="/src/assets/images/meta-Logo.png" alt="" />
           <img className='object-cover w-[200px]' src="/src/assets/images/google-logo.png" alt="" />
           <img className='object-cover w-[200px]' src="/src/assets/images/coursera-logo.png" alt="" />
@@ -39,9 +40,9 @@ const About = () => {
           <div className="clipped-bg" />
           <div className="clipped-bg second" />
           <div className="clipped-bg third" />
-          <div className="flex section-width-default flex-centered z-10">
+          <div className="flex section-width-default flex-centered flex-col lg:flex-row z-10">
             <div className="w-fit my-20">
-              <img className='object-cover min-w-[480px] h-[480px]' src="/src/assets/images/test.jpg" alt="" />
+              <img className='object-cover w-[480px] h-[480px]' src="/src/assets/images/test.jpg" alt="" />
             </div>
             <div className="h-full flex flex-col justify-between ml-10">
               <div className="flex justify-between">
@@ -60,7 +61,7 @@ const About = () => {
       <section className='skills-section section-width-default flex-centered relative mb-40'>
         <div className="flex-centered flex-col">
           <h1 className='mb-40'>What can I do for you?</h1>
-          <div className="grid grid-cols-3 gap-16">
+          <div className="grid grid-rows-3 lg:grid-cols-3 gap-16">
 
             <div className="card text-center flex-centered flex-col px-7 py-7 bg-[#C4E4FF] dark:bg-[#1679AB]">
               <FaLaptopCode className='w-[80px] h-[80px] mb-7' />
@@ -91,15 +92,15 @@ const About = () => {
         <div className="flex-centered section-width-default w-screen">
           <div className="clipped-bg" />
           <div className="section-width-default flex-centered z-10">
-            <div className="h-full flex-centered">
-              <div className="flex flex-col justify-between h-[350px] w-[570px]">
-                <h3>Lets work together</h3>
-                <p>Let’s talk about the results I can get for your business. Free of jargon and without bullshit bingo.</p>
-                <div className="">
+            <div className="h-full flex-centered flex-col-reverse lg:flex-row">
+              <div className="flex flex-col justify-between lg:h-[350px] lg:w-[570px]">
+                <h3 className=''>Lets work together</h3>
+                <p className='my-10 lg:my-0'>Let’s talk about the results I can get for your business. Free of jargon and without bullshit bingo.</p>
+                <div className="mb-10">
                   <button className="btn-primary pink">Get in touch</button>
                 </div>
               </div>
-              <div className="w-[350px] h-[480px] my-20">
+              <div className="w-[350px] h-[480px] my-10 lg:my-20">
                 <img className='object-cover max-w-[350px] h-[480px]' src="/src/assets/images/test.jpg" alt="" />
               </div>
             </div>

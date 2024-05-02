@@ -19,6 +19,10 @@ span {
   @apply text-dark-3 dark:text-light-1;
 }
 
+.massive-text {
+  @apply text-9xl lg:text-[220px];
+}
+
 h1 {
   @apply text-6xl lg:text-[96px] font-extrabold;
 }
@@ -28,15 +32,15 @@ h2 {
 }
 
 h3 {
-  @apply lg:text-[32px] font-bold;
+  @apply text-3xl lg:text-[32px] font-bold;
 }
 
 h4 {
-  @apply lg:text-[24px] font-bold;
+  @apply text-2xl lg:text-[24px] font-bold;
 }
 
 p {
-  @apply lg:text-[24px] font-light;
+  @apply text-xl lg:text-[24px] font-light;
 }
 
 button {
@@ -79,5 +83,5 @@ button {
 }
 
 .btn-tag {
-  @apply text-[32px] font-bold bg-[#C4E4FF] dark:bg-[#00224D] px-8 py-4 rounded-lg;
+  @apply text-2xl lg:text-[32px] font-bold bg-[#C4E4FF] dark:bg-[#00224D] px-4 py-2 lg:px-8 lg:py-4 rounded-lg;
 }
