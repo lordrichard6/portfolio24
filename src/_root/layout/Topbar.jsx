@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { CgMenuBoxed } from "react-icons/cg";
 import { pageLinks } from "../../constants";
 import { BiDownArrow } from "react-icons/bi";
-import {ThemeSwitch} from "./ThemeSwitch";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 const Topbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -49,16 +49,16 @@ const Topbar = () => {
         <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
                 <div className="">
-                <img className='w-20 invert dark:invert-0' src="/src/assets/images/logo_white.png" alt="" />
+                    <img className='w-20 invert dark:invert-0' src="/src/assets/images/logo_white.png" alt="" />
                 </div>
-                <div className="menu-burger flex-centered">
+                {/* <div className="menu-burger flex-centered">
                     <CgMenuBoxed className="lg:hidden text-5xl" />
-                </div>
-                <div className="hidden lg:flex z-50">
+                </div> */}
+                <div className="flex z-50">
                     <ul className="navigation-items flex">
                         {pageLinks.map((item, i) => {
                             return (
-                                <li key={i} className="font-extralight text-5xl tracking-wide px-4 dark:text-slate-100">
+                                <li key={i} className="font-extralight text-4xl lg:text-5xl tracking-wide px-4 dark:text-slate-100">
                                     <a
                                         href={item.to}
                                         className={`relative ${location.pathname === item.to ? "font-black" : ""}`}
