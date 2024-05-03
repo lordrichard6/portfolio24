@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <>
       <header id="top" className='min-h-screen relative flex justify-center items-center mb-20 lg:mb-40'>
-        <div className="section-width-default flex-centered w-full flex-col-reverse xl:flex-row z-20 relative">
-          <img className='w-full p-0 xl:p-6 lg:mx-auto' src="/src/assets/images/me_crossed_arms.png" alt="some" />
-          <div className="blob-container hidden lg:block">
+        <div className="section-width-default flex-centered relative">
+          <img className='w-full sm:w-3/4 lg:w-[60%]  z-10' src="/src/assets/images/me_crossed_arms.png" alt="some" />
+          <div className="blob-container hidden lg:contents z-0">
             <div className="blobs">
               <div className="blob a">a</div>
               <div className="blob b">b</div>
