@@ -1,3 +1,7 @@
+import { FaReact } from "react-icons/fa";
+import { TbBrandThreejs } from "react-icons/tb";
+import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla, SiMongodb } from "react-icons/si";
+
 export const pageLinks = [
     {
         to: "/",
@@ -25,9 +29,24 @@ export const pageLinks = [
     // },
 ];
 
-export const imageLinks = [
+export const projects = [
     {
-        src:"/src/assets/images/me_crossed_arms.png",
-        alt: "paulo reizinho formal"
+      image: "/src/assets/images/home_me_01.png",
+      alt: "Angry Fish",
+      title: "Angry Fish",
+      creator: "Paulo Reizinho",
+      myContribution: "100%",
+      text1:"",
+      text2:"",
+      techs: ["React.js", "TailwindCSS", "AppWrite", "TanStack"],
+      link: "https://angry-fish.vercel.app/",
+      github: "https://github.com/lordrichard6/angry_fish",
+      type: 'personal',
+      date: '2024/04',
+      featured: true,
+      cardId: "card22",
+      tags: ['#react', '#tailwind', 'AppWrite'],
+      hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
+      project_type:"Social Media App"
     }
 ]
