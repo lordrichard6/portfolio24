@@ -14,7 +14,7 @@ export const ThemeSwitch = () => {
     }
 
     return (
-        <div className="theme-toggle fixed top-20">
+        <div className="theme-toggle">
             <input type="checkbox" id="toggle" class="toggle--checkbox" value="" checked={themeMode === 'dark'} onChange={onChangeBtn} />
             <label for="toggle" class="toggle--label">
                 <span class="toggle--label-background"></span>

@@ -1,7 +1,9 @@
 import React from 'react'
 import { SiGithub } from "react-icons/si";
 
+
 const Projects = () => {
+  
   return (
     <>
       <header id="top" className='projects-header max-h-screen min-h-screen w-full relative mb-40 flex-centered'>
@@ -14,7 +16,6 @@ const Projects = () => {
           <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-[10%] lg:bottom-1/3 right-[10%] lg:right-[20%] z-0' src="/src/assets/images/iPhone-1.png" alt="" />
         </div>
       </header>
-
       <section className="portfolio-intro section-width-default w-full flex-centered relative mb-40">
         <div className="flex-centered flex-col">
           <h1 className='mb-40'>Portfolio</h1>

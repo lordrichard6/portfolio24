@@ -49,7 +49,7 @@ const Topbar = () => {
         <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
                 <div className="">
-                    <img className='w-20 invert dark:invert-0' src="/src/assets/images/logo_white.png" alt="" />
+                    <img className='w-10 invert dark:invert-0' src="/src/assets/images/logo_white.png" alt="" />
                 </div>
                 {/* <div className="menu-burger flex-centered">
                     <CgMenuBoxed className="lg:hidden text-5xl" />
@@ -58,7 +58,7 @@ const Topbar = () => {
                     <ul className="navigation-items flex">
                         {pageLinks.map((item, i) => {
                             return (
-                                <li key={i} className="font-extralight text-4xl lg:text-5xl tracking-wide px-4 dark:text-slate-100">
+                                <li key={i} className="font-extralight text-2xl lg:text-3xl tracking-wide px-4 dark:text-slate-100">
                                     <a
                                         href={item.to}
                                         className={`relative ${location.pathname === item.to ? "font-black" : ""}`}

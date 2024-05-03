@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <header id="top" className='min-h-screen relative flex justify-center items-center mb-20 lg:mb-40'>
         <div className="section-width-default flex-centered relative">
-          <img className='w-full sm:w-3/4 lg:w-[60%]  z-10' src="/src/assets/images/me_crossed_arms.png" alt="some" />
+          <img className='w-full sm:w-3/4 lg:w-[60%] z-10' src="/src/assets/images/me_crossed_arms.png" alt="some" />
           <div className="blob-container hidden lg:contents z-0">
             <div className="blobs">
               <div className="blob a">a</div>
@@ -24,16 +24,18 @@ const Home = () => {
         <div className="clipped-bg" />
         <div className="clipped-bg second" />
         <div className="z-10">
-          <h1 className='mb-20 lg:mb-40'>Who am I?</h1>
-          <div className="flex flex-col-reverse lg:flex-row mb-20 lg:mb-40">
-            <div className="grid gap-4">
+          <h1 className='mb-10 lg:mb-20'>Who am I?</h1>
+          <div className="flex flex-col-reverse lg:flex-row mb-10 lg:mb-20">
+            <div className="grid gap-2">
               <h2>Front-end Developer</h2>
               <h2>UI & UX Designer</h2>
               <h2>Digital Marketing Strategist</h2>
             </div>
-            <div className="">
-              <img className='w-[280px] h-[280px] mb-10 lg:mb-0 rounded-full object-cover' src="/src/assets/images/test.jpg" alt="" />
-            </div>
+            <figure className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px] image-hover hover:cursor-pointer">
+              <img className="object-cover object-center" src="/src/assets/images/home_me_01.png" alt="" />
+              <img className="object-cover object-center" src="/src/assets/images/home_me_03.png" alt="" />
+              {/* <img className='w-[280px] h-[280px] mb-10 lg:mb-0 rounded-full object-cover' src="/src/assets/images/test.jpg" alt="" /> */}
+            </figure>
           </div>
           <div className="flex-centered">
             <button className='btn-primary'>Know more</button>
