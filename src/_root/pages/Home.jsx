@@ -15,7 +15,7 @@ const Home = () => {
         <div className="section-width-default flex-centered relative">
           <figure className='z-10 w-full sm:w-3/4 lg:w-[60%] '>
             <img className='01' src={imageLinks[0].src} alt={imageLinks[0].alt} />
-            <img className='02' src={require('/src/assets/images/me_crossed_arms.png')} alt={imageLinks[0].alt} />
+            {/* <img className='02' src={require('/src/assets/images/me_crossed_arms.png')} alt={imageLinks[0].alt} /> */}
             <img className='03' src={logo} alt={imageLinks[0].alt} />
           </figure>
           <div className="blob-container hidden lg:contents z-0">
