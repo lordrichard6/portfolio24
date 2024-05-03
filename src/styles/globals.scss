@@ -272,8 +272,9 @@ html {
   position: fixed !important;
   top: 0;
   /* background: #0094B5; */
-  background: $background-light;
+  // background: $background-light;
   margin-top: 0 !important;
+  @apply light-background dark-background;
 }
 
 .navbar-container {
@@ -379,40 +380,6 @@ html {
 }
 
 // HOME ----------------------------------------------------------------------------------------------------------------
-
-// IMAGE SPLIT
-.image-hover {
-  --g: 8px; /* the gap */
-
-  display: grid;
-  clip-path: inset(1px); /* to avoid visual glitchs */
-  & > img {
-    --_p: calc(-1 * var(--g));
-    grid-area: 1/1;
-    width: 350px; /* control the size */
-    aspect-ratio: 1;
-    cursor: pointer;
-    transition: 0.4s 0.1s;
-  }
-  & > img:first-child {
-    clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
-  }
-  & > img:last-child {
-    clip-path: polygon(
-      100% 100%,
-      100% calc(0% - var(--_p)),
-      calc(0% - var(--_p)) 100%
-    );
-  }
-  &:hover > img:last-child,
-  &:hover > img:first-child:hover {
-    --_p: calc(50% - var(--g));
-  }
-  &:hover > img:first-child,
-  &:hover > img:first-child:hover + img {
-    --_p: calc(-50% - var(--g));
-  }
-}
 
 // HEADER
 .blob-container {
@@ -571,6 +538,40 @@ html {
     .clipped-bg {
       background-image: url("/src/assets/images/test-dark.jpg");
     }
+  }
+}
+
+// IMAGE SPLIT
+.image-hover {
+  --g: 8px; /* the gap */
+
+  display: grid;
+  clip-path: inset(1px); /* to avoid visual glitchs */
+  & > img {
+    --_p: calc(-1 * var(--g));
+    grid-area: 1/1;
+    width: 350px; /* control the size */
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.4s 0.1s;
+  }
+  & > img:first-child {
+    clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
+  }
+  & > img:last-child {
+    clip-path: polygon(
+      100% 100%,
+      100% calc(0% - var(--_p)),
+      calc(0% - var(--_p)) 100%
+    );
+  }
+  &:hover > img:last-child,
+  &:hover > img:first-child:hover {
+    --_p: calc(50% - var(--g));
+  }
+  &:hover > img:first-child,
+  &:hover > img:first-child:hover + img {
+    --_p: calc(-50% - var(--g));
   }
 }
 

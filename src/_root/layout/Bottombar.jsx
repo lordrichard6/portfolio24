@@ -1,3 +1,6 @@
+import signature from '/src/assets/images/signature.svg'
+import signatureDark from '/src/assets/images/signature-dark.svg'
+
 const general = [
     {
         name: "Home",
@@ -38,8 +41,8 @@ const Bottombar = () => {
             <div className="section-width-default">
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-6 gap-6 lg:justify-items-center mb-4 lg:mb-10">
                     <div className="col-span-2">
-                        <img className='signature dark:hidden object-cover w-[300px] h-auto' src="/src/assets/images/signature-dark.svg" alt="" />
-                        <img className='signature hidden dark:block object-cover w-[100px] lg:w-[300px] h-auto' src="/src/assets/images/signature.svg" alt="" />
+                        <img className='signature dark:hidden object-cover w-[300px] h-auto' src={signatureDark} alt="paulo reizinho signature dark" />
+                        <img className='signature hidden dark:block object-cover w-[100px] lg:w-[300px] h-auto' src={signature} alt="paulo reizinho signature" />
                         <p>Zurich</p>
                         <p>Switzerland</p>
                     </div>
@@ -48,7 +51,7 @@ const Bottombar = () => {
                         <ul>
                             {resources.map((item) => {
                                 return (
-                                    <li key={item.name}><a className="text-lg" target="_blank" href={item.link}>{item.name}</a></li>
+                                    <li key={item.name}><a className="text-lg dark:text-slate-50" target="_blank" href={item.link}>{item.name}</a></li>
                                 )
                             })}
                         </ul>
@@ -58,7 +61,7 @@ const Bottombar = () => {
                         <ul>
                             {general.map((item) => {
                                 return (
-                                    <li key={item.name}><a className="text-lg" href={item.link}>{item.name}</a></li>
+                                    <li key={item.name}><a className="text-lg dark:text-slate-50" href={item.link}>{item.name}</a></li>
                                 )
                             })}
                         </ul>

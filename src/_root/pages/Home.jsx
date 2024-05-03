@@ -72,7 +72,7 @@ const Home = () => {
         <div className="clipped-bg second" />
         <div className="clipped-bg third" />
         <div className="z-10">
-          <h1 className='mb-40'>What I’ve build?</h1>
+          <h1 className='mb-20 lg:mb-40'>What I’ve build?</h1>
           {projects.map((project) => {
             if (project.featured) {
               return (

@@ -54,7 +54,7 @@ const Topbar = () => {
                 {/* <div className="menu-burger flex-centered">
                     <CgMenuBoxed className="lg:hidden text-5xl" />
                 </div> */}
-                <div className="flex z-50">
+                <div className="lg:flex z-50 hidden ">
                     <ul className="navigation-items flex">
                         {pageLinks.map((item, i) => {
                             return (
