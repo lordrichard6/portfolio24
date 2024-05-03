@@ -5,14 +5,19 @@ import SignatureComponent from '../../components/signature'
 import { SlSocialLinkedin, SlSocialInstagram } from "react-icons/sl";
 import { SiGithub } from "react-icons/si";
 
-import {imageLinks} from "../../constants"
+import { imageLinks } from "../../constants"
+import logo from '/src/assets/images/me_crossed_arms.png'
 
 const Home = () => {
   return (
     <>
       <header id="top" className='min-h-screen relative flex justify-center items-center mb-20 lg:mb-40'>
         <div className="section-width-default flex-centered relative">
-          <img className='w-full sm:w-3/4 lg:w-[60%] z-10' src={imageLinks[0].src} alt={imageLinks[0].alt} />
+          <figure className='z-10 w-full sm:w-3/4 lg:w-[60%] '>
+            <img className='01' src={imageLinks[0].src} alt={imageLinks[0].alt} />
+            <img className='02' src={require('/src/assets/images/me_crossed_arms.png')} alt={imageLinks[0].alt} />
+            <img className='03' src={logo} alt={imageLinks[0].alt} />
+          </figure>
           <div className="blob-container hidden lg:contents z-0">
             <div className="blobs">
               <div className="blob a">a</div>
