@@ -24,3 +24,10 @@ export const pageLinks = [
     //   tabName: "My CV",
     // },
 ];
+
+export const imageLinks = [
+    {
+        src:"/src/assets/images/me_crossed_arms.png",
+        alt: "paulo reizinho formal"
+    }
+]
