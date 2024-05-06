@@ -8,14 +8,10 @@ import { pageLinks } from "../../constants";
 import { BiDownArrow } from "react-icons/bi";
 import { ThemeSwitch } from "./ThemeSwitch";
 
-const Topbar = () => {
+const Topbar = ({ toggle }) => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
-
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    };
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -52,7 +48,7 @@ const Topbar = () => {
                 <div className="">
                     <img className='w-10 invert dark:invert-0' src={logo} alt="logo paulo reizinho" />
                 </div>
-                <div className="lg:flex z-50 hidden ">
+                <div className="lg:flex z-40 hidden ">
                     <ul className="navigation-items flex">
                         {pageLinks.map((item, i) => {
                             return (
@@ -69,8 +65,13 @@ const Topbar = () => {
                     </ul>
                 </div>
                 <ThemeSwitch />
-                <div className="menu-burger flex-centered">
-                    <CgMenuBoxed className="lg:hidden text-5xl" />
+                <div className="menu-burger relative" onClick={toggle}>
+                    <input className="checkbox" type="checkbox" name="" id="" />
+                    <div className="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
                 </div>
                 {/* <div className="language-container hidden lg:flex">
                     <div onClick={toggle} className="flex relative">

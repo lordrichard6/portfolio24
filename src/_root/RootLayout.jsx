@@ -1,16 +1,23 @@
+import React, { useState } from "react";
 import { Outlet } from 'react-router-dom'
 
 import Topbar from './layout/Topbar'
 import Bottombar from './layout/Bottombar';
+import Sidebar from './layout/Sidebar';
 
 
 const RootLayout = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
       <div className={`main-container relative light-background dark-background`}>
-        <Topbar />
-        {/* <LeftSidebar /> */}
+        <Topbar toggle={toggle} />
+        <Sidebar isOpen={isOpen} toggle={toggle}  />
 
         <main className='flex-centered flex-col'>
           <Outlet />
