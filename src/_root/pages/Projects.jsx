@@ -3,22 +3,26 @@ import { SiGithub } from "react-icons/si";
 
 
 const Projects = () => {
-  
+
   return (
     <>
-      <header id="top" className='projects-header max-h-screen min-h-screen w-full relative mb-40 flex-centered'>
-        <div className="section-width-default">
-          <h1 className='massive-text z-10 relative'>Projects</h1>
-          <h2 className='z-10 relative mb-20'>Big ideas don't fall from the sky...</h2>
-          <p className='w-[600px] mb-[30rem]'>Explore my portfolio further to discover the range and depth of my projects.</p>
-          <img className='object-cover w-[400px] lg:w-auto h-auto absolute bottom-[10%] lg:bottom-1/3 right-0 lg:right-1/4 z-0' src="/src/assets/images/mac.png" alt="" />
-          <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-[15%] lg:bottom-[40%] right-1/3 lg:right-1/4 z-0' src="/src/assets/images/iPhone-2.png" alt="" />
-          <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-[10%] lg:bottom-1/3 right-[10%] lg:right-[20%] z-0' src="/src/assets/images/iPhone-1.png" alt="" />
+      <header id="top" className='projects-header max-h-screen min-h-screen w-full relative mb-20 lg:mb-40 flex-centered'>
+        <div className="section-width-default grid grid-rows-2 xl:grid-cols-2 content-center">
+          <div className="">
+            <h1 className='massive-text z-10 mb-10 lg:mb-20'>Projects</h1>
+            <h2 className='z-10 relative mb-10 lg:mb-20'>Big ideas don't fall from the sky...</h2>
+            <p className='mb-6'>Explore my portfolio further to discover the range and depth of my projects.</p>
+          </div>
+          <div className="relative w-full h-full">
+            <img className='object-cover w-[400px] lg:w-auto h-auto absolute bottom-[-10%] lg:bottom-0 right-0 lg:right-10 z-0' src="/src/assets/images/mac.png" alt="" />
+            <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-0 lg:bottom-10 right-12 lg:right-20 z-0' src="/src/assets/images/iPhone-2.png" alt="" />
+            <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-[-5%] lg:bottom-0 right-0 lg:right-0 z-0' src="/src/assets/images/iPhone-1.png" alt="" />
+          </div>
         </div>
       </header>
-      <section className="portfolio-intro section-width-default w-full flex-centered relative mb-40">
+      <section className="portfolio-intro section-width-default w-full flex-centered relative mb-20 lg:mb-40">
         <div className="flex-centered flex-col">
-          <h1 className='mb-40'>Portfolio</h1>
+          <h1 className='mb-20 lg:mb-40'>Portfolio</h1>
           <p>This is an exploration of font sizing and optimal  character limits per line—because you know, there is a limit. Each line, except the first, aims for a character length between ~70 and ~75 characters. </p>
           <br />
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui modi, quis nisi incidunt quidem ducimus soluta doloribus minima laboriosam mollitia veniam quo asperiores sit aliquid quae? Nobis aliquid excepturi voluptatum.</p>
@@ -27,7 +31,7 @@ const Projects = () => {
 
       <section className="projects-main section-width-default min-h-screen w-full flex-centered flex-col relative">
 
-        <div className="tags-container grid grid-rows-2 grid-flow-col gap-4 mb-40">
+        <div className="tags-container grid grid-rows-4 grid-flow-col gap-4 mb-20 lg:mb-40">
           <button className='btn-tag'>#tag</button>
           <button className='btn-tag'>#tag</button>
           <button className='btn-tag'>#tag</button>

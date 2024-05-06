@@ -7,12 +7,12 @@ const general = [
         link: "/"
     },
     {
-        name: "About",
-        link: "/about"
+        name: "Projects",
+        link: "/projects"
     },
     {
-        name: "Projects",
-        link: "/"
+        name: "About",
+        link: "/about"
     },
     {
         name: "Contact",
