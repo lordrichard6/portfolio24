@@ -2,9 +2,22 @@ import { FaReact } from "react-icons/fa";
 import { TbBrandThreejs } from "react-icons/tb";
 import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla, SiMongodb } from "react-icons/si";
 
+import portfolio22 from '../assets/images/projects/portfolio23.png'
 import angryFish from '../assets/images/projects/angryfish.jpg'
+import thinkBig from '../assets/images/projects/thinkbig.png'
 import fastRent from '../assets/images/projects/fastrent.png'
 import fahrerzentrale from '../assets/images/projects/fahrezentrale.png'
+import pickwings from '../assets/images/projects/pickwings.png'
+import helpinghand from '../assets/images/projects/helping.png'
+import hulu from '../assets/images/projects/hulu.png'
+import skytours from '../assets/images/projects/skytours.png'
+import monkey from '../assets/images/projects/monkey.png'
+import limmastadt from '../assets/images/projects/limmatstadt.png'
+import protier from '../assets/images/projects/protier.png'
+import bezahlbare from '../assets/images/projects/bezahlbare-Wohnungen.png'
+import feinheit from '../assets/images/projects/feinheit.png'
+import fcz from '../assets/images/projects/fcz.png'
+
 
 export const pageLinks = [
     {
@@ -33,57 +46,55 @@ export const pageLinks = [
     // },
 ];
 
-// export const projects = [
-//     {
-//       image: "/src/assets/images/home_me_01.png",
-//       alt: "Angry Fish",
-//       title: "Angry Fish",
-//       creator: "Paulo Reizinho",
-//       myContribution: "100%",
-//       text1:"",
-//       text2:"",
-//       techs: ["React.js", "TailwindCSS", "AppWrite", "TanStack"],
-//       link: "https://angry-fish.vercel.app/",
-//       github: "https://github.com/lordrichard6/angry_fish",
-//       type: 'personal',
-//       date: '2024/04',
-//       featured: true,
-//       cardId: "card22",
-//       tags: ['#react', '#tailwind', 'AppWrite'],
-//       hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
-//       project_type:"Social Media App"
-//     }
-// ]
 
 export const projects = [
+  {
+    image: portfolio22,
+    alt: "Portfolio 2022",
+    title: "Portfolio 2022",
+    creator: "Paulo Reizinho",
+    myContribution: "100%",
+    text1: "",
+    text2: "",
+    techs: ["React.js", "TailwindCSS"],
+    link: "https://pauloreizinho.vercel.app/",
+    github: "https://github.com/lordrichard6/portfolio21",
+    // icon: [<FaReact key={1} />],
+    type: 'personal',
+    date: '2022/06',
+    featured: true,
+    cardId: "card22",
+    tags: ['#react', '#tailwind'],
+    hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
+    project_type:"Portfolio",
+    class: "variant-02",
+    btnColor: "blue"
+  },
     {
       image: angryFish,
       alt: "Angry Fish",
       title: "Angry Fish",
       creator: "Paulo Reizinho",
       myContribution: "100%",
-      text: ["Created with React and typescript;","Back-end with AppWripte","TanStack a powerful and type-safe form state management;","I can't miss TailwindCSS;"],
-      // text: [
-      //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
-      //   "Sit nulla est ex deserunt exercitation anim occaecat.",
-      //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
-      // ],
+      text1: "Explore social media with this user-friendly platform that has a nice look and lots of features. Easily create and explore posts, a strong authentication system and quick data fetching using React Query for a smooth user experience.",
+      text2: "Implemented key functionalities such as exploring posts, liking and saving content, creating and editing posts, and browsing other users. Utilized a responsive UI with a bottom bar for seamless navigation and integrated React Query for optimized data fetching. Leveraged Appwrite as a Backend as a Service solution for streamlined backend development, offering authentication, database, file storage, and more.",
       shortText: "projects:project_featured_angryFish",
-      techs: ["React.js", "TailwindCSS", "AppWrite", "TanStack"],
+      techs: ["React.js", "TailwindCSS", "#AppWrite", "TanStack"],
       link: "https://angry-fish.vercel.app/",
       github: "https://github.com/lordrichard6/angry_fish",
-    //   icon: [<FaReact key={0}/>],
+      // icon: [<FaReact key={1} />],
       type: 'personal',
       date: '2024/04',
       featured: true,
       cardId: "card22",
-      tags: ['#react', '#tailwind', 'AppWrite'],
+      tags: ['#react', '#tailwind', '#AppWrite'],
       hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
       project_type:"Social Media App",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
-      image: angryFish,
+      image: thinkBig,
       alt: "think big homepage",
       title: "ThinkBig",
       creator: "Paulo Reizinho",
@@ -106,7 +117,8 @@ export const projects = [
       tags: ['#react', '#tailwind'],
       hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
       project_type:"",
-      class: ""
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
       image: fahrerzentrale,
@@ -132,10 +144,11 @@ export const projects = [
       tags: ['#angular', '#django', '#docker'],
       hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"],
       project_type:"",
-      class: "variant-right"
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
-      image: '/projects/pickwings.png',
+      image: pickwings,
       alt: "pickwings homepage",
       title: "Pickwings",
       creator: "Pickwings",
@@ -158,10 +171,11 @@ export const projects = [
       tags: ['#angular', '#django', '#docker'],
       hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"],
       project_type:"",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
-      image: '/projects/helping.png',
+      image: helpinghand,
       alt: "helping hand homepage",
       title: "Helping Hand",
       creator: "WebDvision",
@@ -186,86 +200,90 @@ export const projects = [
       tags: ['#joomla'],
       hiddenTags: ['#joomla'],
       project_type:"",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
-    {
-      image: "/projects/altynai.png",
-      alt: "online clothing shop",
-      title: "Altynay Fashion",
-      creator: "Paulo Reizinho",
-      myContribution: "Complete",
-      text: ["COMING SOON!"],
-      // text: [
-      //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
-      //   "Sit nulla est ex deserunt exercitation anim occaecat.",
-      //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
-      // ],
-      shortText: "In this web development project, I created a modern and user-friendly e-commerce website for your business. The website features a seamless shopping experience, intuitive navigation, and a secure payment gateway. With a responsive design, it ensures a seamless browsing experience across devices. The site also includes inventory management, order tracking, and customer account functionality. By leveraging the latest web technologies, I've provided a solid foundation for your online business to thrive.",
-      techs: ["NextJS","MongoDB", "TailwindCSS", "styled-components", "BCrypt", "Axios", "React Paypal"],
-      link: "https://altynai-fashion.vercel.app/",
-      github: "https://github.com/lordrichard6/altynai-ecommerce-shop",
-    //   icon: [<SiNextdotjs key={0}/>, <SiMongodb key={1}/>],
-      type: 'personal',
-      date: '2022/09',
-      featured: false,
-      cardId: "card6",
-      tags: ['#nextjs', '#tailwind', '#mongodb'],
-      hiddenTags: ['#all','#nextjs', '#tailwind', '#mongodb', "#javascript"],
-      project_type:"",
-      class: ""
-    },
-    {
-      image: "/projects/bastards.png",
-      alt: "left bastards website",
-      title: "Left Bastards",
-      creator: "Paulo Reizinho",
-      myContribution: "Complete",
-      text: ["COMING SOON!"],
-      // text: [
-      //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
-      //   "Sit nulla est ex deserunt exercitation anim occaecat.",
-      //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
-      // ],
-      shortText: "In this exciting web development project, I built a dynamic and immersive website using Next.js for a passionate car group of fans. The website serves as a hub for car enthusiasts to connect, share their experiences, and stay up-to-date with the latest automotive news and events.",
-      techs: ["NextJS","styled-components", "React Icons", "Typescript"],
-      link: "https://left-bastards.vercel.app/",
-      github: "https://github.com/lordrichard6/left_bastards",
-    //   icon: [<SiNextdotjs key={0}/>],
-      type: 'personal',
-      date: '2021/12',
-      featured: false,
-      cardId: "card7",
-      tags: ['#nextjs', '#typescript'],
-      hiddenTags: ['#all','#nextjs', '#typescript', "#javascript", "#styled-components"],
-      project_type:"",
-      class: ""
-    },
-    {
-      image: "/projects/sardinha.png",
-      alt: "sardinha drive",
-      title: "Sardinha Drive",
-      creator: "Paulo Reizinho",
-      myContribution: "Complete",
-      text: ["COMING SOON!"],
-      // text: [
-      //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
-      //   "Sit nulla est ex deserunt exercitation anim occaecat.",
-      //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
-      // ],
-      shortText: "In this remarkable web development project, I built a professional and elegant website using Next.js for a chauffeur company. The website serves as a powerful online platform that showcases the company's premium chauffeur services, creating a seamless experience for potential clients.",
-      techs: ["NextJS","styled-components", "typescript", "Framer-motion", "Material-ui"],
-      link: "https://patricia-vila-nova.vercel.app/",
-      github: "https://github.com/lordrichard6/patricia_project",
-    //   icon: [<SiNextdotjs key={0}/>],
-      type: 'profissional',
-      date: '2021/11',
-      featured: false,
-      cardId: "card8",
-      tags: ['#nextjs', '#typescript', '#framer-motion'],
-      hiddenTags: ['#all','#nextjs', '#typescript', '#framer-motion', "#javascript"],
-      project_type:"",
-      class: ""
-    },
+    // {
+    //   image: "/projects/altynai.png",
+    //   alt: "online clothing shop",
+    //   title: "Altynay Fashion",
+    //   creator: "Paulo Reizinho",
+    //   myContribution: "Complete",
+    //   text: ["COMING SOON!"],
+    //   // text: [
+    //   //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
+    //   //   "Sit nulla est ex deserunt exercitation anim occaecat.",
+    //   //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
+    //   // ],
+    //   shortText: "In this web development project, I created a modern and user-friendly e-commerce website for your business. The website features a seamless shopping experience, intuitive navigation, and a secure payment gateway. With a responsive design, it ensures a seamless browsing experience across devices. The site also includes inventory management, order tracking, and customer account functionality. By leveraging the latest web technologies, I've provided a solid foundation for your online business to thrive.",
+    //   techs: ["NextJS","MongoDB", "TailwindCSS", "styled-components", "BCrypt", "Axios", "React Paypal"],
+    //   link: "https://altynai-fashion.vercel.app/",
+    //   github: "https://github.com/lordrichard6/altynai-ecommerce-shop",
+    // //   icon: [<SiNextdotjs key={0}/>, <SiMongodb key={1}/>],
+    //   type: 'personal',
+    //   date: '2022/09',
+    //   featured: false,
+    //   cardId: "card6",
+    //   tags: ['#nextjs', '#tailwind', '#mongodb'],
+    //   hiddenTags: ['#all','#nextjs', '#tailwind', '#mongodb', "#javascript"],
+    //   project_type:"",
+    //   class: "",
+    // btnColor: ""
+    // },
+    // {
+    //   image: "/projects/bastards.png",
+    //   alt: "left bastards website",
+    //   title: "Left Bastards",
+    //   creator: "Paulo Reizinho",
+    //   myContribution: "Complete",
+    //   text: ["COMING SOON!"],
+    //   // text: [
+    //   //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
+    //   //   "Sit nulla est ex deserunt exercitation anim occaecat.",
+    //   //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
+    //   // ],
+    //   shortText: "In this exciting web development project, I built a dynamic and immersive website using Next.js for a passionate car group of fans. The website serves as a hub for car enthusiasts to connect, share their experiences, and stay up-to-date with the latest automotive news and events.",
+    //   techs: ["NextJS","styled-components", "React Icons", "Typescript"],
+    //   link: "https://left-bastards.vercel.app/",
+    //   github: "https://github.com/lordrichard6/left_bastards",
+    // //   icon: [<SiNextdotjs key={0}/>],
+    //   type: 'personal',
+    //   date: '2021/12',
+    //   featured: false,
+    //   cardId: "card7",
+    //   tags: ['#nextjs', '#typescript'],
+    //   hiddenTags: ['#all','#nextjs', '#typescript', "#javascript", "#styled-components"],
+    //   project_type:"",
+    //   class: "",
+    // btnColor: ""
+    // },
+    // {
+    //   image: "/projects/sardinha.png",
+    //   alt: "sardinha drive",
+    //   title: "Sardinha Drive",
+    //   creator: "Paulo Reizinho",
+    //   myContribution: "Complete",
+    //   text: ["COMING SOON!"],
+    //   // text: [
+    //   //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
+    //   //   "Sit nulla est ex deserunt exercitation anim occaecat.",
+    //   //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
+    //   // ],
+    //   shortText: "In this remarkable web development project, I built a professional and elegant website using Next.js for a chauffeur company. The website serves as a powerful online platform that showcases the company's premium chauffeur services, creating a seamless experience for potential clients.",
+    //   techs: ["NextJS","styled-components", "typescript", "Framer-motion", "Material-ui"],
+    //   link: "https://patricia-vila-nova.vercel.app/",
+    //   github: "https://github.com/lordrichard6/patricia_project",
+    // //   icon: [<SiNextdotjs key={0}/>],
+    //   type: 'profissional',
+    //   date: '2021/11',
+    //   featured: false,
+    //   cardId: "card8",
+    //   tags: ['#nextjs', '#typescript', '#framer-motion'],
+    //   hiddenTags: ['#all','#nextjs', '#typescript', '#framer-motion', "#javascript"],
+    //   project_type:"",
+    //   class: "",
+    //   btnColor: ""
+    // },
     {
       image: fastRent,
       alt: "car rental website",
@@ -290,10 +308,11 @@ export const projects = [
       tags: ['#reactjs', '#typescript', '#tailwind'],
       hiddenTags: ['#all','#nextjs', '#typescript', '#tailwind', "#javascript"],
       project_type:"",
-      class: ""
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
-      image: "/projects/skytours.png",
+      image: skytours,
       alt: "world tours website",
       title: "Skytours",
       creator: "Paulo Reizinho",
@@ -316,10 +335,11 @@ export const projects = [
       tags: ['#reactjs'],
       hiddenTags: ['#all','#react', "#javascript"],
       project_type:"",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
-      image: "/projects/hulu.png",
+      image: hulu,
       alt: "movie streaming platform hulu",
       title: "Hulu clone",
       creator: "Paulo Reizinho",
@@ -342,10 +362,11 @@ export const projects = [
       tags: ['#nextjs', '#tailwind'],
       hiddenTags: ['#all','#nextjs', '#tailwind', "#javascript"],
       project_type:"",
-      class: ""
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
-      image: "/projects/monkey.png",
+      image: monkey,
       alt: "eshop for trained monkeys",
       title: "Monkey Circus",
       creator: "Paulo Reizinho",
@@ -368,7 +389,8 @@ export const projects = [
       tags: ['#nextjs', '#typescript'],
       hiddenTags: ['#all','#nextjs', '#typescript', "#javascript"],
       project_type:"",
-      class: ""
+      class: "variant-02",
+      btnColor: "blue"
     },
     // {
     //   image: "/projects/sphere.png",
@@ -491,7 +513,7 @@ export const projects = [
     //   featured: false,
     // },
     {
-      image: '/projects/limmatstadt.png',
+      image: limmastadt,
       alt: "limmastadt website",
       title: "Limmatstadt",
       creator: "Feinheit",
@@ -514,10 +536,11 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
-      image: '/projects/protier.png',
+      image: protier,
       alt: "protier website",
       title: "Protier",
       creator: "Feinheit",
@@ -540,10 +563,11 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: ""
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
-      image: '/projects/bezahlbare-Wohnungen.png',
+      image: bezahlbare,
       alt: "Bezahlbare Wohnungen project",
       title: "Bezahlbare Wohnungen",
       creator: "Feinheit",
@@ -557,7 +581,7 @@ export const projects = [
       shortText: "",
       techs: ["Angular", "Django"],
       link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/",
-      github: "COMING SOON!",
+      github: "",
     //   icon: [<SiAngular key={0} />,<SiDjango key={1} />],
       type: 'profissional',
       date: '2019/11',
@@ -566,10 +590,11 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
-      image: '/projects/feinheit.png',
+      image: feinheit,
       alt: "Feinheit website",
       title: "Feinheit",
       creator: "Feinheit",
@@ -592,10 +617,11 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: ""
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
-      image: '/projects/fcz.png',
+      image: fcz,
       alt: "fcz website",
       title: "FCZ Website",
       creator: "Feinheit",
@@ -618,7 +644,8 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: ""
+      class: "variant-01",
+      btnColor: "pink"
     },
   ];
   

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import logo from '../../assets/images/logo_white.png'
 
 import { CgMenuBoxed } from "react-icons/cg";
 import { pageLinks } from "../../constants";
@@ -49,11 +50,8 @@ const Topbar = () => {
         <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
                 <div className="">
-                    <img className='w-10 invert dark:invert-0' src="/src/assets/images/logo_white.png" alt="" />
+                    <img className='w-10 invert dark:invert-0' src={logo} alt="logo paulo reizinho" />
                 </div>
-                {/* <div className="menu-burger flex-centered">
-                    <CgMenuBoxed className="lg:hidden text-5xl" />
-                </div> */}
                 <div className="lg:flex z-50 hidden ">
                     <ul className="navigation-items flex">
                         {pageLinks.map((item, i) => {
@@ -71,6 +69,9 @@ const Topbar = () => {
                     </ul>
                 </div>
                 <ThemeSwitch />
+                <div className="menu-burger flex-centered">
+                    <CgMenuBoxed className="lg:hidden text-5xl" />
+                </div>
                 {/* <div className="language-container hidden lg:flex">
                     <div onClick={toggle} className="flex relative">
                         <BiDownArrow style={languageArrow} className="arrow cursor-pointer" />
