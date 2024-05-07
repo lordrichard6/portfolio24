@@ -187,7 +187,7 @@ const About = () => {
                 <h3 className=''>Lets work together</h3>
                 <p className='my-10 lg:my-0'>Let’s talk about the results I can get for your business. Free of jargon and without bullshit bingo.</p>
                 <div className="mb-10">
-                  <button className="primary pink">Get in touch</button>
+                  <button className="btn primary pink">Get in touch</button>
                 </div>
               </div>
               <div className="w-[350px] h-[480px] my-10 lg:my-20">

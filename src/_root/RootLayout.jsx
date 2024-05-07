@@ -16,8 +16,8 @@ const RootLayout = () => {
   return (
     <>
       <div className={`main-container relative light-background dark-background`}>
-        <Topbar toggle={toggle} />
         <Sidebar isOpen={isOpen} toggle={toggle}  />
+        <Topbar toggle={toggle} />
 
         <main className='flex-centered flex-col'>
           <Outlet />
