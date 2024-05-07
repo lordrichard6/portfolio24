@@ -65,12 +65,12 @@ const Topbar = ({ toggle }) => {
                     </ul>
                 </div>
                 <ThemeSwitch />
-                <div className="menu-burger relative" onClick={toggle}>
+                <div className="menu-burger relative lg:hidden" onClick={toggle}>
                     <input className="checkbox" type="checkbox" name="" id="" />
                     <div className="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
+                        <span className="line line1"></span>
+                        <span className="line line2"></span>
+                        <span className="line line3"></span>
                     </div>
                 </div>
                 {/* <div className="language-container hidden lg:flex">

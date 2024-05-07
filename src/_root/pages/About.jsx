@@ -1,38 +1,134 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+import SideScroller from '../../components/SideScroller'
+
 import { FaLaptopCode } from "react-icons/fa";
 import { BsLayoutWtf } from "react-icons/bs";
 import { IoShareSocialOutline } from "react-icons/io5";
 
+import meta from '/src/assets/images/meta-Logo.png'
+import google from '/src/assets/images/google-logo.png'
+import coursera from '/src/assets/images/coursera-logo.png'
+import udemy from '/src/assets/images/udemy-logo.png'
+import freecodecamp from '/src/assets/images/freecodecamp-logo.png'
+import youtube from '/src/assets/images/youtube-logo.png'
+import SkillCard from '../../components/SkillCard';
+
+import dev01 from '../../assets/icons/front-01.svg'
+import dev02 from '../../assets/icons/front-02.svg'
+import dev03 from '../../assets/icons/front-03.svg'
+import design01 from '../../assets/icons/design-01.svg'
+import design02 from '../../assets/icons/design-02.svg'
+import design03 from '../../assets/icons/design-03.svg'
+import mark01 from '../../assets/icons/mark-01.svg'
+import mark02 from '../../assets/icons/mark-02.svg'
+import mark03 from '../../assets/icons/mark-03.svg'
+
+const header = {
+  title: "Unveiling the Story Behind the Journey"
+}
+
+const learnTitle = "Learning with the best!"
+
+const learningPartners = [
+  {
+    logo: meta,
+    alt: "meta logo",
+    style: "dark:invert"
+  },
+  {
+    logo: google,
+    alt: "google logo",
+    style: ""
+  },
+  {
+    logo: coursera,
+    alt: "coursera logo",
+    style: ""
+  },
+  {
+    logo: udemy,
+    alt: "udemy logo",
+    style: "dark:invert"
+  },
+  {
+    logo: freecodecamp,
+    alt: "freecodecamp logo",
+    style: "dark:invert"
+  },
+  {
+    logo: youtube,
+    alt: "youtube logo",
+    style: ""
+  },
+].map(({ logo, alt, style }) => ({
+  image: logo,
+  alt,
+  id: alt,
+  style: style
+}))
+
+const skillsSection = {
+  title: "What can I do for you?"
+}
+
+const skillCards = [
+  {
+    title: "Front-end Development",
+    text: "I get the most out of your Google Ads campaigns. Let me setup, manage and optimize your account.",
+    img01: dev01,
+    img02: dev02,
+    img03: dev03,
+    alt01: "",
+    alt02: "",
+    alt03: "",
+    cardClass: "card-dev"
+  },
+  {
+    title: "UI & UX Designer",
+    text: "I get the most out of your Google Ads campaigns. Let me setup, manage and optimize your account.",
+    img01: design01,
+    img02: design02,
+    img03: design03,
+    alt01: "",
+    alt02: "",
+    alt03: "",
+    cardClass: "card-design"
+  },
+  {
+    title: "Digital Marketing Strategy",
+    text: "I get the most out of your Google Ads campaigns. Let me setup, manage and optimize your account.",
+    img01: mark01,
+    img02: mark02,
+    img03: mark03,
+    alt01: "",
+    alt02: "",
+    alt03: "",
+    cardClass: "card-mark"
+  },
+]
+
+
 const About = () => {
+
   return (
     <>
-      <header id="top" className='about-header max-h-screen min-h-screen w-full relative'>
-        <h1 className='massive-text absolute top-[20%] z-10'>About</h1>
-        <div className="dark:hidden">
-          {/* <img className='object-cover w-screen h-full absolute top-0 z-0' src="/src/assets/images/h-about-full.png" alt="" /> */}
-          <img className='object-cover w-screen h-auto absolute bottom-0 z-20' src="/src/assets/images/h-about-blur.png" alt="" />
-          <img className='object-cover w-screen h-auto absolute bottom-0 z-20' src="/src/assets/images/h-about-sand.png" alt="" />
-        </div>
-        <div className="hidden dark:contents">
-          <img className='object-cover w-screen h-full absolute top-0 z-0' src="/src/assets/images/h-about-full-dark.png" alt="" />
-          <img className='object-cover w-screen h-auto absolute bottom-0 z-20' src="/src/assets/images/h-about-blur-dark.png" alt="" />
-          <img className='object-cover w-screen h-auto absolute bottom-0 z-20' src="/src/assets/images/h-about-sand-dark.png" alt="" />
+      <header id="top" className='about-header max-h-screen min-h-screen w-full relative flex-centered flex-col'>
+        <h1 className='massive-text absolute top-[10%] left-[10%] z-10 opacity-20 blur-sm'>About</h1>
+        <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none blur-sm'>{header.title}</h1>
+        <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
+        <h1 className='title absolute z-20 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
+        <div className="clipped-bg shape1 z-10" />
+        <div className="clipped-bg shape2 z-10" />
+        <div className="clipped-bg shape3 z-10" />
+        <div className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]">
+          <img className='object-cover lg:max-w-[450px] lg:h-[580px] rounded-xl' src="/src/assets/images/test.jpg" alt="" />
         </div>
       </header>
 
-      <section className="partners relative flex-centered flex-col w-full">
-        <img className='object-cover dark:hidden w-screen h-full top-0 z-0' src="/src/assets/images/h-about-upside.png" alt="" />
-        <img className='object-cover hidden dark:block w-screen h-full top-0 z-0' src="/src/assets/images/h-about-upside-dark.png" alt="" />
-        <div className="fading absolute w-screen h-full top-0 z-0" />
-        <h2 className='z-10'>Learning with the best!</h2>
-        <div className="z-20 grid grid-rows-2 grid-flow-col gap-10 lg:gap-20 items-center mb-20 lg:mb-40">
-          <img className='object-cover dark:invert w-[200px]' src="/src/assets/images/meta-Logo.png" alt="" />
-          <img className='object-cover w-[200px]' src="/src/assets/images/google-logo.png" alt="" />
-          <img className='object-cover w-[200px]' src="/src/assets/images/coursera-logo.png" alt="" />
-          <img className='object-cover dark:invert w-[200px]' src="/src/assets/images/udemy-logo.png" alt="" />
-          <img className='object-cover dark:invert w-[200px]' src="/src/assets/images/freecodecamp-logo.png" alt="" />
-          <img className='object-cover w-[200px] p-6' src="/src/assets/images/youtube-logo.png" alt="" />
-        </div>
+      <section className="partners relative flex-centered flex-col w-full my-20">
+        <h2>{learnTitle}</h2>
+        <SideScroller images={learningPartners} speed={8000} />
       </section>
 
       <section className='about-intro flex-centered relative mb-40'>
@@ -40,13 +136,13 @@ const About = () => {
           <div className="clipped-bg" />
           <div className="clipped-bg second" />
           <div className="clipped-bg third" />
-          <div className="flex section-width-default flex-centered flex-col lg:flex-row z-10">
-            <div className="w-fit my-20">
+          <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4 z-10 py-10 lg:py-20">
+            <div className="col-span-1 lg:col-span-2">
               <img className='object-cover w-[480px] h-[480px]' src="/src/assets/images/test.jpg" alt="" />
             </div>
-            <div className="h-full flex flex-col justify-between ml-10">
+            <div className="col-span-1 lg:col-span-4 ml-10">
               <div className="flex justify-between">
-                <h3>Hi, I’m Paulo Reizinho</h3>
+                <h3 className='mb-6'>Hi, I’m Paulo Reizinho</h3>
               </div>
               <p>As a Google Ads specialist, I help ambitious companies get the most out of Google Ads. I work for a select number of clients and am responsible for over €1,500,000 per month in ad spend.</p>
               <br />
@@ -58,32 +154,26 @@ const About = () => {
         </div>
       </section>
 
-      <section className='skills-section section-width-default flex-centered relative mb-40'>
+      <section className='skills-section section-width-default flex-centered relative mb-20'>
         <div className="flex-centered flex-col">
-          <h1 className='mb-40'>What can I do for you?</h1>
-          <div className="grid grid-rows-3 lg:grid-cols-3 gap-16">
-
-            <div className="card text-center flex-centered flex-col px-7 py-7 bg-[#C4E4FF] dark:bg-[#1679AB]">
-              <FaLaptopCode className='w-[80px] h-[80px] mb-7' />
-              <h3 className='mb-7'>Front-end Development</h3>
-              <p className='mb-7 px-4'>I get the most out of your Google Ads campaigns. Let me setup, manage and optimize your account.</p>
-              <button className="btn-small bg-[#FEF3DF] dark:bg-[#504024]">Learn more</button>
-            </div>
-
-            <div className="card text-center flex-centered flex-col px-7 py-7 bg-[#E6EBE4] dark:bg-[#44671f]">
-              <BsLayoutWtf className='w-[80px] h-[80px] mb-7' />
-              <h3 className='mb-7'>UI & UX Designer</h3>
-              <p className='mb-7 px-4'>I get the most out of your Google Ads campaigns. Let me setup, manage and optimize your account.</p>
-              <button className="btn-small blue">Learn more</button>
-            </div>
-
-            <div className="card text-center flex-centered flex-col px-7 py-7 bg-[#E1AFD1] dark:bg-[#5D1176]">
-              <IoShareSocialOutline className='w-[80px] h-[80px] mb-7' />
-              <h3 className='mb-7'>Digital Marketing Strategy</h3>
-              <p className='mb-7 px-4'>I get the most out of your Google Ads campaigns. Let me setup, manage and optimize your account.</p>
-              <button className="btn-small bg-[#E6EBE4] dark:bg-[#475342]">Learn more</button>
-            </div>
-
+          <h1 className='mb-20'>{skillsSection.title}</h1>
+          <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-16">
+            {skillCards.map((item) => {
+              return (
+                <SkillCard
+                  key={item.cardClass}
+                  title={item.title}
+                  text={item.text}
+                  icon01={item.img01}
+                  icon02={item.img02}
+                  icon03={item.img03}
+                  alt01={item.alt01}
+                  alt02={item.alt02}
+                  alt03={item.alt03}
+                  cardClass={item.cardClass}
+                />
+              )
+            })}
           </div>
         </div>
       </section>
