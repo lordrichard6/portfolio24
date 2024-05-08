@@ -31,19 +31,19 @@ const Topbar = ({ toggle }) => {
         navbarClasses.push("scrolled");
     }
 
-    const languageArrow = {
-        transform: `rotateZ(${isOpen ? "180deg" : "0deg"})`,
-    };
+    // const languageArrow = {
+    //     transform: `rotateZ(${isOpen ? "180deg" : "0deg"})`,
+    // };
 
-    const dropdown = {
-        '@media (min-width: 1024px)': {
-            opacity: isOpen ? "100" : "0",
-            height: isOpen ? "120px" : "0px",
-        },
-    };
+    // const dropdown = {
+    //     '@media (min-width: 1024px)': {
+    //         opacity: isOpen ? "100" : "0",
+    //         height: isOpen ? "120px" : "0px",
+    //     },
+    // };
 
     return (
-        <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30`}>
+        <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30 transition duration-300 ease-in-out`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
                 <div className="">
                     <img className='w-10 invert dark:invert-0' src={logo} alt="logo paulo reizinho" />

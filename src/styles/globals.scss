@@ -100,6 +100,8 @@ h1 {
 
 html {
   &.light {
+    --project-header-color-01: #ffba11;
+    --project-header-color-02: #b6acff;
     .light-background {
       background-image: $background-light;
       --black-white: #2f3349;
@@ -107,6 +109,8 @@ html {
   }
 
   &.dark {
+    --project-header-color-01: #ffba11;
+    --project-header-color-02: #b6acff;
     .dark-background {
       background-image: $background-dark;
       --black-white: #ffffff;
@@ -893,6 +897,50 @@ html {
       transparent 100%
     ),
     linear-gradient(45deg, rgba(83, 91, 235, 0.55), rgba(76, 11, 174, 0.27));
+
+    
+    .overlapping-title {
+      height: 2em;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: screen;
+      @apply text-[15vmin] lg:text-[20vmin];
+      
+      span {
+        font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        display: block;
+        position: absolute;
+        color: var(--project-header-color-01);
+        letter-spacing: -.005em;
+    
+        &::before, &::after {
+          content: attr(data-text);
+          display: block;
+          position: relative;
+          padding: 0 .1em;
+          z-index: 1;
+        }
+    
+        &::before {
+          position: absolute;
+          -webkit-text-stroke: .1em black;
+          z-index: 0;
+        }
+    
+        &:first-child {
+          transform: translate(-.555em, -.25em);
+        }
+    
+        &:last-child {
+          color: var(--project-header-color-02);
+          transform: translate(.255em, .25em);
+        }
+      }
+    }
 }
 
 .dark {

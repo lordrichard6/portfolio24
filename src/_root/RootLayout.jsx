@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet } from 'react-router-dom'
 
 import Topbar from './layout/Topbar'
@@ -9,9 +9,23 @@ import Sidebar from './layout/Sidebar';
 const RootLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleScroll = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   return (
     <>
