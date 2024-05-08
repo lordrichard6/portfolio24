@@ -1079,6 +1079,11 @@ html {
   transition: transform 1s;
   &.is-flipped {
     transform: translateX(-100%) rotateY(-180deg);
+    .front {
+      button {
+        @apply opacity-0;
+      }
+    }
   }
   .card-face {
     position: absolute;
