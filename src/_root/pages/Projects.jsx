@@ -71,7 +71,7 @@ const Projects = () => {
 
       <section className="projects-main section-width-default min-h-screen w-full flex-centered flex-col relative">
 
-        <div className="tags-container grid grid-rows-4 lg:grid-rows-2 lg:grid-cols-4 gap-4 mb-20 lg:mb-40">
+        <div className="tags-container grid grid-cols-2 lg:grid-rows-2 lg:grid-cols-4 gap-4 mb-20 lg:mb-40">
           {
             tags.map((tag) => {
               return (

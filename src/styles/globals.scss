@@ -996,7 +996,7 @@ html {
 
 // ABOUT HEADER
 .about-header {
-  background: linear-gradient(to top, #acb6e5, #86fde8);
+  background: var(--about-header-bg);
 
   .title {
     color: transparent;
@@ -1005,7 +1005,9 @@ html {
   }
 
   .clipped-bg {
-    @apply absolute w-screen h-full top-0 bg-[#C4E4FF] dark:bg-[#1679AB] z-0;
+    background-attachment: fixed;
+    background-image: var(--blue-radial-bg);
+    @apply absolute w-screen h-full top-0 z-0;
     &.shape1 {
       clip-path: circle(21.3% at 67% 36%);
     }
@@ -1051,11 +1053,15 @@ html {
 // ABOUT INTRO
 
 .about-intro {
+  .bg-container {
+    background-image: var(--green-radial-bg);
+  }
   .clipped-bg {
     // clip-path: polygon(100% 20%, 100% 60%, 0 80%, 0 40%);
     clip-path: circle(10.2% at 86% 35%);
     background-attachment: fixed;
-    @apply bg-cover bg-[#B4C2A7] dark:bg-[#24390e] absolute w-screen h-full z-0 blur-sm;
+    background-image: var(--green-radial-bg2);
+    @apply bg-cover absolute w-screen h-full z-0 blur-sm;
     &.second {
       clip-path: circle(15.5% at 2% 66%);
     }
@@ -1087,7 +1093,7 @@ html {
     }
   }
   .card-dev {
-    @apply bg-[#C4E4FF] dark:bg-[#1679AB];
+    background-image: var(--blue-radial-bg);
     img {
       &:nth-child(2) {
         @apply -translate-x-6 -translate-y-4 -rotate-45;
@@ -1101,13 +1107,13 @@ html {
     }
   }
   .card-design {
-    @apply bg-[#dbedd4] dark:bg-[#44671f];
+    background-image: var(--green-radial-bg);
     button {
       @apply bg-[#E1AFD1] dark:bg-[#5D1176];
     }
   }
   .card-mark {
-    @apply bg-[#E1AFD1] dark:bg-[#5D1176];
+    background-image: var(--purple-radial-bg);
     img {
       &:nth-child(3) {
         @apply translate-x-16 -translate-y-4 rotate-45;

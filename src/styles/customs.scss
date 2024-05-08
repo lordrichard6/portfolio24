@@ -49,14 +49,8 @@ button {
   @apply text-dark-3 dark:text-light-1;
 }
 
-.dark {
-  .btn {
-    --pink: #5D1176;
-  }
-}
 
 .btn {
-  --pink: #E1AFD1;
 
   &.primary {
     position: relative;
@@ -179,12 +173,12 @@ button {
       height: 100%;
       width: 0;
       border-radius: 15px;
-      background-color: #5D1176;
+      background-color: #451D76;
       z-index: -1;
       -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
       box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
       transition: all 250ms;
-      @apply bg-[#5D1176] dark:bg-[#E1AFD1];
+      @apply bg-[#451D76] dark:bg-[#aa548e];
      }
      &:hover {
       color: #e8e8e8;

@@ -1,3 +1,5 @@
+import { useLocation } from "react-router-dom";
+
 import signature from '/src/assets/images/signature.svg'
 import signatureDark from '/src/assets/images/signature-dark.svg'
 
@@ -36,6 +38,9 @@ const resources = [
 ]
 
 const Bottombar = () => {
+    const location = useLocation();
+
+
     return (
         <footer className='w-full bg-[#FEF3DF] dark:bg-[#451d76] relative flex-centered pt-10 lg:pt-20'>
             <div className="section-width-default">
@@ -51,7 +56,7 @@ const Bottombar = () => {
                         <ul>
                             {resources.map((item) => {
                                 return (
-                                    <li key={item.name}><a className="text-lg dark:text-slate-50" target="_blank" href={item.link}>{item.name}</a></li>
+                                    <li key={item.name}><a className="text-lg dark:text-slate-50 hover:font-extrabold" target="_blank" href={item.link}>{item.name}</a></li>
                                 )
                             })}
                         </ul>
@@ -61,7 +66,7 @@ const Bottombar = () => {
                         <ul>
                             {general.map((item) => {
                                 return (
-                                    <li key={item.name}><a className="text-lg dark:text-slate-50" href={item.link}>{item.name}</a></li>
+                                    <li key={item.name}><a className={`text-lg dark:text-slate-50 hover:font-extrabold ${location.pathname === item.to ? "extrabold" : ""}`} href={item.link}>{item.name}</a></li>
                                 )
                             })}
                         </ul>

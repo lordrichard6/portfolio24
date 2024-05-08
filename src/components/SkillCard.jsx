@@ -1,7 +1,7 @@
 const SkillCard = ({ cardClass, icon01, icon02, icon03, alt01, alt02, alt03, title, text, turnCard, isFlipped }) => {
     return (
-        <div className="skill-card relative w-[358px] min-h-[542px] h-[542px]">
-            <div className={`card front ${cardClass} ${isFlipped ? 'flipped' : ''} text-center flex-centered flex-col px-7 py-7 absolute w-full h-full`}>
+        <div className="skill-card relative w-[358px] min-h-[542px] h-[580px]">
+            <div className={`card front ${cardClass} ${isFlipped ? 'flipped' : ''} text-center flex justify-between items-center flex-col px-7 py-7 absolute w-full h-full`}>
                 <figure className="relative top-0 w-[90px] h-[90px] mb-7 dark:invert">
                     <img src={icon01} alt={alt01} />
                     <img src={icon02} alt={alt02} />
