@@ -1090,6 +1090,11 @@ html {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    &.front {
+      button {
+        @apply opacity-100 transition ease-in-out duration-300 delay-150;
+      }
+    }
     
     img {
       @apply w-full h-full absolute transition ease-in-out duration-300 delay-150;
