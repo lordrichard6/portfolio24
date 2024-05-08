@@ -99,188 +99,22 @@ h1 {
 }
 
 html {
-  &.light {
-    --project-header-color-01: #ffba11;
-    --project-header-color-02: #b6acff;
-    .light-background {
-      background-image: $background-light;
-      --black-white: #2f3349;
-    }
-  }
-
-  &.dark {
-    --project-header-color-01: #ffba11;
-    --project-header-color-02: #b6acff;
-    .dark-background {
-      background-image: $background-dark;
-      --black-white: #ffffff;
-    }
-  }
+  background-image: var(--main-background);
+  background-size: cover;
+  --black-white: #2f3349;
+  --black-white: #ffffff;
 }
-
-// THEME BTN
-.theme-toggle {
-  .toggle--checkbox {
-    display: none;
-  }
-  .toggle--checkbox:checked {
-    /** This will all flip from sun to moon **/
-    /** Change the label color **/
-  }
-  .toggle--checkbox:checked ~ .background {
-    background: var(--indigo-background);
-  }
-  .toggle--checkbox:checked + .toggle--label {
-    background: var(--indigo-color);
-    border-color: var(--indigo-border);
-    /** Change the cloud to stars **/
-    /** Change the sun into the moon **/
-    /** Show the dimples on the moon **/
-  }
-  .toggle--checkbox:checked + .toggle--label .toggle--label-background {
-    left: 28px;
-    width: 3px;
-  }
-  .toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
-    width: 5px;
-    height: 5px;
-    top: -8px;
-    left: -14px;
-  }
-  .toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
-    width: 5px;
-    height: 5px;
-    left: -20px;
-    top: 4px;
-  }
-  .toggle--checkbox:checked + .toggle--label:before {
-    background: var(--white);
-    border-color: var(--gray-border);
-    animation-name: switch;
-    animation-duration: 350ms;
-    animation-fill-mode: forwards;
-  }
-  .toggle--checkbox:checked + .toggle--label:after {
-    transition-delay: 350ms;
-    opacity: 1;
-  }
-  .toggle--label {
-    /** Placeholder element, starting at blue **/
-    width: 100px;
-    height: 46px;
-    background: var(--blue-color);
-    border-radius: 100px;
-    border: 3px solid var(--blue-border);
-    display: flex;
-    position: relative;
-    transition: all 350ms ease-in;
-    /** The sun cloud and moon stars **/
-    /** Sun/Moon element **/
-    /** Gray dots on the moon **/
-  }
-  .toggle--label-background {
-    width: 8px;
-    height: 3px;
-    border-radius: 5px;
-    position: relative;
-    background: var(--white);
-    left: 56px;
-    top: 18px;
-    transition: all 150ms ease-in;
-  }
-  .toggle--label-background:before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    width: 28px;
-    height: 3px;
-    border-radius: 5px;
-    background: var(--white);
-    left: -10px;
-    transition: all 150ms ease-in;
-  }
-  .toggle--label-background:after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    width: 28px;
-    height: 3px;
-    border-radius: 5px;
-    background: var(--white);
-    left: -2px;
-    transition: all 150ms ease-in;
-  }
-  .toggle--label:before {
-    animation-name: reverse;
-    animation-duration: 350ms;
-    animation-fill-mode: forwards;
-    transition: all 350ms ease-in;
-    content: "";
-    width: 36px;
-    height: 36px;
-    border: 3px solid var(--yellow-border);
-    top: 2px;
-    left: 2px;
-    position: absolute;
-    border-radius: 82px;
-    background: var(--yellow-background);
-  }
-  .toggle--label:after {
-    transition-delay: 0ms;
-    transition: all 250ms ease-in;
-    position: absolute;
-    content: "";
-    box-shadow: var(--gray-dots) -13px 0 0 2px,
-      var(--gray-dots) -18px 8px 0 -1px;
-    left: 80px;
-    top: 12px;
-    width: 5px;
-    height: 5px;
-    background: transparent;
-    border-radius: 50%;
-    opacity: 0;
-  }
-
-  @keyframes switch {
-    0% {
-      left: 2px;
-    }
-    60% {
-      left: 4px;
-      width: 80px;
-    }
-    100% {
-      left: 56px;
-      width: 36px;
-    }
-  }
-  @keyframes reverse {
-    0% {
-      left: 56px;
-      width: 36px;
-    }
-    60% {
-      left: 4px;
-      width: 80px;
-    }
-    100% {
-      left: 2px;
-    }
-  }
-}
-
-// TYPOGRAPHY ----------------------------------------------------------------------------------------------------------------
 
 // LAYOUT ----------------------------------------------------------------------------------------------------------------
 
 // NAV
 .scrolled {
+  background-image: var(--main-background);
   position: fixed !important;
   top: 0;
   /* background: #0094B5; */
   // background: $background-light;
   margin-top: 0 !important;
-  @apply light-background dark-background;
 }
 
 .navbar-container {
@@ -438,6 +272,157 @@ html {
       a {
         text-shadow: 0 0 80px #3f0f78, 0 0 30px #451d76;
       }
+    }
+  }
+}
+
+// THEME BTN
+.theme-toggle {
+  .toggle--checkbox {
+    display: none;
+  }
+  .toggle--checkbox:checked {
+    /** This will all flip from sun to moon **/
+    /** Change the label color **/
+  }
+  .toggle--checkbox:checked ~ .background {
+    background: var(--indigo-background);
+  }
+  .toggle--checkbox:checked + .toggle--label {
+    background: var(--indigo-color);
+    border-color: var(--indigo-border);
+    /** Change the cloud to stars **/
+    /** Change the sun into the moon **/
+    /** Show the dimples on the moon **/
+  }
+  .toggle--checkbox:checked + .toggle--label .toggle--label-background {
+    left: 28px;
+    width: 3px;
+  }
+  .toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+    width: 5px;
+    height: 5px;
+    top: -8px;
+    left: -14px;
+  }
+  .toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+    width: 5px;
+    height: 5px;
+    left: -20px;
+    top: 4px;
+  }
+  .toggle--checkbox:checked + .toggle--label:before {
+    background: var(--white);
+    border-color: var(--gray-border);
+    animation-name: switch;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+  }
+  .toggle--checkbox:checked + .toggle--label:after {
+    transition-delay: 350ms;
+    opacity: 1;
+  }
+  .toggle--label {
+    /** Placeholder element, starting at blue **/
+    width: 100px;
+    height: 46px;
+    background: var(--blue-color);
+    border-radius: 100px;
+    border: 3px solid var(--blue-border);
+    display: flex;
+    position: relative;
+    transition: all 350ms ease-in;
+    /** The sun cloud and moon stars **/
+    /** Sun/Moon element **/
+    /** Gray dots on the moon **/
+  }
+  .toggle--label-background {
+    width: 8px;
+    height: 3px;
+    border-radius: 5px;
+    position: relative;
+    background: var(--white);
+    left: 56px;
+    top: 18px;
+    transition: all 150ms ease-in;
+  }
+  .toggle--label-background:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 28px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--white);
+    left: -10px;
+    transition: all 150ms ease-in;
+  }
+  .toggle--label-background:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 28px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--white);
+    left: -2px;
+    transition: all 150ms ease-in;
+  }
+  .toggle--label:before {
+    animation-name: reverse;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    transition: all 350ms ease-in;
+    content: "";
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--yellow-border);
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    border-radius: 82px;
+    background: var(--yellow-background);
+  }
+  .toggle--label:after {
+    transition-delay: 0ms;
+    transition: all 250ms ease-in;
+    position: absolute;
+    content: "";
+    box-shadow: var(--gray-dots) -13px 0 0 2px,
+      var(--gray-dots) -18px 8px 0 -1px;
+    left: 80px;
+    top: 12px;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  @keyframes switch {
+    0% {
+      left: 2px;
+    }
+    60% {
+      left: 4px;
+      width: 80px;
+    }
+    100% {
+      left: 56px;
+      width: 36px;
+    }
+  }
+  @keyframes reverse {
+    0% {
+      left: 56px;
+      width: 36px;
+    }
+    60% {
+      left: 4px;
+      width: 80px;
+    }
+    100% {
+      left: 2px;
     }
   }
 }
@@ -625,6 +610,7 @@ html {
     -webkit-clip-path: circle(33.3% at 93% 49%);
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
+    background-size: cover;
     @apply bg-cover  absolute w-screen h-full z-0 blur-sm;
     &.second {
       clip-path: circle(23.4% at 5% 63%);
@@ -898,49 +884,50 @@ html {
     ),
     linear-gradient(45deg, rgba(83, 91, 235, 0.55), rgba(76, 11, 174, 0.27));
 
-    
-    .overlapping-title {
-      height: 2em;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      mix-blend-mode: screen;
-      @apply text-[15vmin] lg:text-[20vmin];
-      
-      span {
-        font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-weight: 700;
-        font-style: italic;
+  .overlapping-title {
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+    @apply text-[15vmin] lg:text-[20vmin];
+
+    span {
+      font-family: Impact, "Anton", Haettenschweiler, "Arial Narrow Bold",
+        sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      display: block;
+      position: absolute;
+      color: var(--project-header-color-01);
+      letter-spacing: -0.005em;
+
+      &::before,
+      &::after {
+        content: attr(data-text);
         display: block;
+        position: relative;
+        padding: 0 0.1em;
+        z-index: 1;
+      }
+
+      &::before {
         position: absolute;
-        color: var(--project-header-color-01);
-        letter-spacing: -.005em;
-    
-        &::before, &::after {
-          content: attr(data-text);
-          display: block;
-          position: relative;
-          padding: 0 .1em;
-          z-index: 1;
-        }
-    
-        &::before {
-          position: absolute;
-          -webkit-text-stroke: .1em black;
-          z-index: 0;
-        }
-    
-        &:first-child {
-          transform: translate(-.555em, -.25em);
-        }
-    
-        &:last-child {
-          color: var(--project-header-color-02);
-          transform: translate(.255em, .25em);
-        }
+        -webkit-text-stroke: 0.1em black;
+        z-index: 0;
+      }
+
+      &:first-child {
+        transform: translate(-0.555em, -0.25em);
+      }
+
+      &:last-child {
+        color: var(--project-header-color-02);
+        transform: translate(0.255em, 0.25em);
       }
     }
+  }
 }
 
 .dark {
@@ -997,356 +984,11 @@ html {
 .project {
   &.variant-01 {
     background-attachment: fixed;
-    background-image: repeating-linear-gradient(
-        135deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        45deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        67.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        135deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        45deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        112.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        112.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        45deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        22.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        45deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        22.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        135deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        157.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        67.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        67.5deg,
-        hsla(264, 0%, 88%, 0.03) 0px,
-        hsla(264, 0%, 88%, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      linear-gradient(90deg, rgb(162, 119, 195), rgb(94, 192, 192));
+    background-image: var(--project-variant-01);
   }
 
   &.variant-02 {
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        112.5deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        22.5deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        67.5deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        157.5deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        112.5deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        67.5deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.03) 0px,
-        rgba(0, 0, 0, 0.03) 1px,
-        transparent 1px,
-        transparent 12px
-      ),
-      linear-gradient(90deg, rgb(139, 137, 168), rgb(255, 195, 235));
-  }
-}
-
-.dark {
-  .project {
-    &.variant-01 {
-      background-image: linear-gradient(
-          0deg,
-          rgba(85, 9, 165, 0.2) 0%,
-          rgba(85, 9, 165, 0.2) 16.667%,
-          rgba(62, 50, 198, 0.2) 16.667%,
-          rgba(62, 50, 198, 0.2) 33.334%,
-          rgba(39, 91, 231, 0.2) 33.334%,
-          rgba(39, 91, 231, 0.2) 50.001%,
-          rgba(50, 70, 214, 0.2) 50.001%,
-          rgba(50, 70, 214, 0.2) 66.668%,
-          rgba(73, 29, 181, 0.2) 66.668%,
-          rgba(73, 29, 181, 0.2) 83.335%,
-          rgba(27, 111, 247, 0.2) 83.335%,
-          rgba(27, 111, 247, 0.2) 100.002%
-        ),
-        linear-gradient(
-          22.5deg,
-          rgba(85, 9, 165, 0.2) 0%,
-          rgba(85, 9, 165, 0.2) 16.667%,
-          rgba(62, 50, 198, 0.2) 16.667%,
-          rgba(62, 50, 198, 0.2) 33.334%,
-          rgba(39, 91, 231, 0.2) 33.334%,
-          rgba(39, 91, 231, 0.2) 50.001%,
-          rgba(50, 70, 214, 0.2) 50.001%,
-          rgba(50, 70, 214, 0.2) 66.668%,
-          rgba(73, 29, 181, 0.2) 66.668%,
-          rgba(73, 29, 181, 0.2) 83.335%,
-          rgba(27, 111, 247, 0.2) 83.335%,
-          rgba(27, 111, 247, 0.2) 100.002%
-        ),
-        linear-gradient(
-          157.5deg,
-          rgba(85, 9, 165, 0.2) 0%,
-          rgba(85, 9, 165, 0.2) 16.667%,
-          rgba(62, 50, 198, 0.2) 16.667%,
-          rgba(62, 50, 198, 0.2) 33.334%,
-          rgba(39, 91, 231, 0.2) 33.334%,
-          rgba(39, 91, 231, 0.2) 50.001%,
-          rgba(50, 70, 214, 0.2) 50.001%,
-          rgba(50, 70, 214, 0.2) 66.668%,
-          rgba(73, 29, 181, 0.2) 66.668%,
-          rgba(73, 29, 181, 0.2) 83.335%,
-          rgba(27, 111, 247, 0.2) 83.335%,
-          rgba(27, 111, 247, 0.2) 100.002%
-        ),
-        linear-gradient(90deg, rgb(62, 62, 62), rgb(101, 101, 101));
-    }
-
-    &.variant-02 {
-      background-attachment: fixed;
-      background-image: repeating-linear-gradient(
-          45deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          112.5deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          22.5deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          67.5deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          45deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          157.5deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          112.5deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          67.5deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.03) 0px,
-          rgba(255, 255, 255, 0.03) 1px,
-          transparent 1px,
-          transparent 12px
-        ),
-        linear-gradient(90deg, rgb(13, 8, 66), rgb(190, 93, 158));
-    }
+    background-image: var(--project-variant-02);
   }
 }
 
@@ -1443,8 +1085,6 @@ html {
         transform: rotateY(0deg); /* Rotates to front when flipped */
       }
     }
-  
-    
   }
   .card-dev {
     @apply bg-[#C4E4FF] dark:bg-[#1679AB];

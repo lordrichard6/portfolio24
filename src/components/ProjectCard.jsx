@@ -6,7 +6,7 @@ const ProjectCard = ({ tags, title, imgSrc, imgAlt, text1, text2, variant, githu
             <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4">
 
                 <div className="col-span-1 lg:col-span-2 my-10">
-                    <img className='object-cover rounded w-auto lg:w-[480px] h-[480px] lg:h-[480px]' src={imgSrc} alt={imgAlt} />
+                    <img className='object-cover rounded w-full lg:w-[480px] h-[480px] lg:h-[480px]' src={imgSrc} alt={imgAlt} />
                 </div>
 
                 <div className="col-span-1 lg:col-span-4 h-full flex flex-col justify-between lg:my-10">
