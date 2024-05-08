@@ -81,15 +81,15 @@ button {
     }
     &:hover:before {
       top: -70%;
-      background-image: radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, transparent 20%, var(--pink) 20%, transparent 30%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, transparent 10%, var(--pink) 15%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%);
+      background-image: radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, var(--btn-color) 20%, transparent 30%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--btn-color) 15%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%);
       background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
         15% 15%, 10% 10%, 18% 18%;
       background-position: 50% 120%;
@@ -114,13 +114,13 @@ button {
     }
     &:hover::after {
       bottom: -70%;
-      background-image: radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, transparent 10%, var(--pink) 15%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%),
-        radial-gradient(circle, var(--pink) 20%, transparent 20%);
+      background-image: radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--btn-color) 15%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--btn-color) 20%, transparent 20%);
       background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%,
         18% 18%;
       background-position: 50% 0%;
@@ -150,7 +150,7 @@ button {
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
-    color: #212121;
+    color: var(--black-white);
     z-index: 1;
     position: relative;
     font-weight: 1000;
@@ -158,7 +158,7 @@ button {
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     transition: all 250ms;
     overflow: hidden;
-    @apply dark:text-slate-100 text-xl;
+    @apply text-xl;
 
     &:active {
       box-shadow: 2px 6px 10px -3px rgba(0, 0, 0, 0.27);
@@ -178,10 +178,10 @@ button {
       -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
       box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
       transition: all 250ms;
-      @apply bg-[#451D76] dark:bg-[#aa548e];
+      background-color: var(--btn-small);
      }
      &:hover {
-      color: #e8e8e8;
+      color: var(--black-white-invert);
      }
      &:hover::before {
       width: 100%;
@@ -193,42 +193,19 @@ button {
   }
 
   &.pink {
-    @apply bg-[#E1AFD1] dark:bg-[#5D1176];
+    --btn-small:var(--black-white);
+    --btn-color: var(--pink);
+    background-color: var(--pink);
   }
   &.blue {
-    @apply bg-[#C4E4FF] dark:bg-[#1679AB];
+    --btn-small:var(--black-white);
+    --btn-color: var(--blue);
+    background-color: var(--blue);
   }
-}
-
-
-.btn-small {
-  @apply text-2xl font-bold px-[16px] py-[8px] rounded-lg mx-4;
-
-  &.pink {
-    @apply bg-[#E1AFD1] dark:bg-[#5D1176];
-  }
-  &.blue {
-    @apply bg-[#C4E4FF] dark:bg-[#1679AB];
-  }
-}
-
-.btn-social {
-  @apply flex-centered p-4 lg:p-6 rounded-lg mx-4;
-
-  svg {
-    @apply w-[20px] h-[20px] lg:w-[28px] lg:h-[28px];
-  }
-  &.pink {
-    @apply bg-[#E1AFD1] dark:bg-[#5D1176];
-  }
-  &.blue {
-    @apply bg-[#C4E4FF] dark:bg-[#1679AB];
-  }
-  &.small {
-    @apply w-[36px] h-[36px];
-    svg {
-      @apply w-[18px] h-[18px];
-    }
+  &.green {
+    --btn-small:var(--black-white);
+    --btn-color: var(--green);
+    background-color: var(--green);
   }
 }
 

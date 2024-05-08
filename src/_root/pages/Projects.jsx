@@ -98,7 +98,6 @@ const Projects = () => {
                 btn={item.btnColor}
                 techs={item.icon}
               />
-
             )
           })}
         </div>

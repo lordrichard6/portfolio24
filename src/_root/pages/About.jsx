@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-
 import SideScroller from '../../components/SideScroller'
 
 import { FaLaptopCode } from "react-icons/fa";
 import { BsLayoutWtf } from "react-icons/bs";
 import { IoShareSocialOutline } from "react-icons/io5";
+import { FaReact, FaAngular, FaVuejs, FaFigma   } from "react-icons/fa";
+import { SiNextdotjs, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import { DiGoogleAnalytics } from "react-icons/di";
 
 import meta from '/src/assets/images/meta-Logo.png'
 import google from '/src/assets/images/google-logo.png'
@@ -96,7 +97,19 @@ const skillCards = [
     alt01: "web development puzzle icon",
     alt02: "web development puzzle icon",
     alt03: "web development puzzle icon",
-    cardClass: "card-dev"
+    cardClass: "card-dev",
+    btnColor: "green",
+    tasks: [
+      "Build Responsive and Interactive Websites that adapt seamlessly to various screen sizes and devices.",
+      "Translate design mockups into functional and visually accurate web interfaces.",
+      "Optimize Performance and Accessibility with the best practices and techniques to optimize website performance."
+    ],
+    techs: [
+      <FaReact className='text-sky-900 dark:text-sky-400' />,
+      <SiNextdotjs className='text-slate-900 dark:text-slate-100' />,
+      <FaAngular className='text-rose-600 dark:text-rose-400' />,
+      <FaVuejs className='text-green-800 dark:text-green-400' />
+    ]
   },
   {
     title: "UI & UX Design",
@@ -107,7 +120,18 @@ const skillCards = [
     alt01: "interface organizing icon",
     alt02: "interface organizing icon",
     alt03: "interface organizing icon",
-    cardClass: "card-design"
+    cardClass: "card-design",
+    btnColor: "pink",
+    tasks: [
+      "Conduct thorough user Research and Analysis to understand user needs, behaviors, and pain points.",
+      "Develop wireframes and prototypes using Figma or Sketch to visualize design concepts, user flows, and interactions.",
+      "Optimize Performance and Accessibility with the best practices and techniques to optimize website performance."
+    ],
+    techs: [
+      <FaFigma className='text-rose-600 dark:text-rose-400' />,
+      <SiAdobephotoshop  className='text-sky-900 dark:text-sky-400' />,
+      <SiAdobeillustrator  className='text-yellow-600 dark:text-yellow-300' />,
+    ]
   },
   {
     title: "Digital Marketing Strategy",
@@ -118,7 +142,17 @@ const skillCards = [
     alt01: "targeting mobile marketing icon",
     alt02: "targeting mobile marketing icon",
     alt03: "targeting mobile marketing icon",
-    cardClass: "card-mark"
+    cardClass: "card-mark",
+    btnColor: "blue",
+    tasks: [
+      "Tailor digital marketing strategies to meet business objectives using channels like SEO, SEM, and social media.",
+      "Track and optimize key metrics to enhance campaign ROI and drive continuous growth.",
+      "Stay Updated on Industry Trends and adapt strategies accordingly to remain competitive."
+    ],
+    techs: [
+      <DiGoogleAnalytics className='text-yellow-600 dark:text-yellow-300' />,
+
+    ]
   },
 ]
 
@@ -128,7 +162,6 @@ const contactMe = {
   image: meContact,
   alt: "my picture"
 }
-
 
 const About = () => {
 
@@ -178,7 +211,7 @@ const About = () => {
       <section className='skills-section section-width-default flex-centered relative mb-20'>
         <div className="flex-centered flex-col">
           <h1 className='mb-20'>{skillsSection.title}</h1>
-          <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-16">
+          <div style={{perspective: '1000px'}} className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-16">
             {skillCards.map((item) => {
               return (
                 <SkillCard
@@ -192,6 +225,9 @@ const About = () => {
                   alt02={item.alt02}
                   alt03={item.alt03}
                   cardClass={item.cardClass}
+                  btnColor={item.btnColor}
+                  tasks={item.tasks}
+                  techs={item.techs}
                 />
               )
             })}
@@ -199,7 +235,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className='work-together bg-[#E0F1F1] dark:bg-[#2d4a4a] w-full flex-centered relative'>
+      <section className='work-together w-full flex-centered relative'>
         <div className="flex-centered section-width-default w-screen">
           <div className="clipped-bg" />
           <div className="section-width-default flex-centered z-10">
@@ -208,7 +244,7 @@ const About = () => {
                 <h3 className=''>{contactMe.title}</h3>
                 <p className='my-10 lg:my-0'>{contactMe.text}</p>
                 <div className="mb-10">
-                  <button className="btn primary pink"><a href="/contact">Get in touch</a></button>
+                  <button className="btn primary green"><a href="/contact">Get in touch</a></button>
                 </div>
               </div>
               <div className="w-[350px] h-[480px] my-10 lg:my-20">
