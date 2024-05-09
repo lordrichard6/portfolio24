@@ -610,8 +610,7 @@ html {
     -webkit-clip-path: circle(33.3% at 93% 49%);
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
-    background-size: cover;
-    @apply bg-cover  absolute w-screen h-full z-0 blur-sm;
+    @apply bg-cover bg-center absolute w-screen h-full z-0;
     &.second {
       clip-path: circle(23.4% at 5% 63%);
     }
