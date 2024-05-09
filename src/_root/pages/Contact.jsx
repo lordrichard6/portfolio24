@@ -76,7 +76,7 @@ const Contact = () => {
           </div>
         </div>
       </header>
-      <section className='h-[70vh] lg:h-[20vh]'></section>
+      <section className='h-[1270px] lg:h-[20vh]'></section>
     </>
   )
 }
