@@ -17,7 +17,8 @@ h2,
 h3,
 h4,
 p,
-span {
+span,
+label {
   @apply text-dark-3 dark:text-light-1;
 }
 

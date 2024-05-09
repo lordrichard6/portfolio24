@@ -17,10 +17,11 @@ const whoAmI = {
   pos3: "Digital Marketing Strategist",
 }
 
-const socialMedia = {
+export const socialMedia = {
   linkedin: "https://www.linkedin.com/in/pauloreizinho/",
   instagram: "https://www.instagram.com/paulo_reizinho/",
-  github: "https://github.com/lordrichard6"
+  github: "https://github.com/lordrichard6",
+  whatsapp: "https://wa.link/sru6m7"
 }
 
 const Home = () => {

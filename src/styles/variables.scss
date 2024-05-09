@@ -20,6 +20,7 @@ html {
     --blue-radial-bg2: radial-gradient(circle at bottom center, rgb(30, 227, 217),rgb(4, 89, 247));
     --blue-radial-bg3: radial-gradient(circle at top center, rgba(230,217,186, 0.17),rgba(12,92,185, 0.36));
     --purple-radial-bg: radial-gradient(circle at top center, rgba(213,140,216, 0.47),rgba(74,39,191, 0.56));
+    --pink-circles-bg: radial-gradient(circle at 13% 60%, rgba(70, 70, 70,0.06) 0%, rgba(70, 70, 70,0.06) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 51% 56%, rgba(44, 44, 44,0.06) 0%, rgba(44, 44, 44,0.06) 18%,transparent 18%, transparent 100%),radial-gradient(circle at 97% 87%, rgba(219, 219, 219,0.06) 0%, rgba(219, 219, 219,0.06) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 45% 35%, rgba(83, 83, 83,0.06) 0%, rgba(83, 83, 83,0.06) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 81% 28%, rgba(215, 215, 215,0.06) 0%, rgba(215, 215, 215,0.06) 55%,transparent 55%, transparent 100%),radial-gradient(circle at 95% 15%, rgba(213, 213, 213,0.06) 0%, rgba(213, 213, 213,0.06) 52%,transparent 52%, transparent 100%),linear-gradient(90deg, rgba(193,60,179, 0.4),rgba(214,39,128, 0.36));
   }
 
   &.dark {
@@ -40,5 +41,6 @@ html {
     --blue-radial-bg2: radial-gradient(circle at bottom center, rgba(30,227,217, 0.42),rgba(4,89,247, 0.42));
     --blue-radial-bg3: radial-gradient(circle at center center, rgb(15, 78, 199),rgb(21, 67, 172),rgb(27, 56, 145),rgb(33, 44, 118),rgb(39, 33, 91));
     --purple-radial-bg: radial-gradient(circle at bottom center, rgb(84, 13, 239),rgb(79, 34, 84));
+    --pink-circles-bg: radial-gradient(circle at 13% 60%, rgba(70, 70, 70,0.06) 0%, rgba(70, 70, 70,0.06) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 51% 56%, rgba(44, 44, 44,0.06) 0%, rgba(44, 44, 44,0.06) 18%,transparent 18%, transparent 100%),radial-gradient(circle at 97% 87%, rgba(219, 219, 219,0.06) 0%, rgba(219, 219, 219,0.06) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 45% 35%, rgba(83, 83, 83,0.06) 0%, rgba(83, 83, 83,0.06) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 81% 28%, rgba(215, 215, 215,0.06) 0%, rgba(215, 215, 215,0.06) 55%,transparent 55%, transparent 100%),radial-gradient(circle at 95% 15%, rgba(213, 213, 213,0.06) 0%, rgba(213, 213, 213,0.06) 52%,transparent 52%, transparent 100%),linear-gradient(90deg, rgb(193, 60, 179),rgb(214, 39, 128));
   }
 }
