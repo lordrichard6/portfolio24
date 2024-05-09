@@ -3,7 +3,7 @@ import { pageLinks } from "../../constants";
 const Sidebar = ({ isOpen, toggle }) => {
 
     return (
-        <nav onClick={toggle} className={`sidebar light-background dark-background ${isOpen ? "right-[-65%] sm:right-[-80%]" : "right-[-100%]"} fixed top-0 right-0 w-full h-auto rounded-bl-xl flex flex-col z-30`}>
+        <nav onClick={toggle} className={`sidebar ${isOpen ? "right-[-65%] sm:right-[-80%]" : "right-[-100%]"} fixed top-0 right-0 w-full h-auto rounded-bl-xl flex flex-col z-30`}>
             <div className="lg:flex z-50 mt-[76px]">
                 <ul className="navigation-items flex flex-col mb-10">
                     {pageLinks.map((item, i) => {

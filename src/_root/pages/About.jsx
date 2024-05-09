@@ -1,8 +1,5 @@
 import SideScroller from '../../components/SideScroller'
 
-import { FaLaptopCode } from "react-icons/fa";
-import { BsLayoutWtf } from "react-icons/bs";
-import { IoShareSocialOutline } from "react-icons/io5";
 import { FaReact, FaAngular, FaVuejs, FaFigma   } from "react-icons/fa";
 import { SiNextdotjs, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
 import { DiGoogleAnalytics } from "react-icons/di";

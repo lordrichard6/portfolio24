@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { SiGithub } from "react-icons/si";
-
 import { projects } from '../../constants';
 
 import iphonePortfolio from '../../assets/images/iPhone-1.png'
