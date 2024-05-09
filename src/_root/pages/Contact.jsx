@@ -15,7 +15,7 @@ import handIcon from '../../assets/icons/hand.svg'
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
-
+  
   const handleOnSubmit = (e) => {
     const publicKey = process.env.EMAILJS_PUBLIC_KEY
     const serviceId = process.env.EMAILJS_SERVICE_ID
@@ -103,7 +103,7 @@ const Contact = () => {
                 <textarea id="message" name="message" rows="6" placeholder="What do you need help with? What challenges you have?" required></textarea>
               </fieldset>
               {stateMessage && <span>{stateMessage}</span>}
-              <button className='btn small blue' type='submit' value="Send" disabled={isSubmitting} >Send</button>
+              <button className='btn small blue' type='submit' disabled={isSubmitting} >Send</button>
             </form>
           </div>
         </div>

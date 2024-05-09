@@ -12,9 +12,9 @@ import freecodecamp from '/src/assets/images/freecodecamp-logo.png'
 import youtube from '/src/assets/images/youtube-logo.png'
 import SkillCard from '../../components/SkillCard';
 
-import meHeader from '../../assets/images/test.jpg'
-import meAbout from '../../assets/images/test.jpg'
-import meContact from '../../assets/images/test.jpg'
+import meHeader from '../../assets/images/me03.jpg'
+import meAbout from '../../assets/images/me02.jpg'
+import meContact from '../../assets/images/me01.jpg'
 import dev01 from '../../assets/icons/front-01.svg'
 import dev02 from '../../assets/icons/front-02.svg'
 import dev03 from '../../assets/icons/front-03.svg'
