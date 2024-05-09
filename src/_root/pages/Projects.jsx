@@ -17,9 +17,9 @@ const headerText = {
 
 const portfolioIntro = {
   title: "Portfolio",
-  text1: "My commitment to staying abreast of the latest trends and best practices in front-end development allows me to consistently push the boundaries of what's possible, creativity doesn't have limits if you have the drive and the passion.",
-  text2: "Having worked with Angular and Django in professional settings, built personal projects with React and NextJS always focusing and improving the UI and UX in each project, this website is one of my latest achievments. I possess a good understanding of both front-end and back-end development, allowing me to create seamless, integrated solutions that exceed client expectations.",
-  text3: "In summary, my expertise as a front-end developer extends beyond mere coding proficiency. It encompasses a holistic approach to design and development, rooted in a deep understanding of user behavior and an unwavering commitment to excellence. With a proven track record of success and a passion for innovation, I am poised to make a meaningful impact on any project I undertake."
+  text1: <p>My <strong>commitment</strong> to staying abreast of the latest trends and best practices in front-end development allows me to consistently push the boundaries of what's possible, <strong>creativity</strong> doesn't have limits if you have the drive and the <strong>passion</strong>.</p>,
+  text2: <p>Having worked with <strong>Angular</strong> and <strong>Django</strong> in professional settings, built personal projects with <strong>React</strong> and <strong>NextJS</strong> always focusing and improving the <strong>UI</strong> and <strong>UX</strong> in each project, this website is one of my latest <strong>achievments</strong>. I possess a good understanding of both <strong>front-end</strong> and <strong>back-end</strong> development, allowing me to create seamless, integrated solutions that <strong>exceed</strong> client <strong>expectations</strong>.</p>,
+  text3: <p>In summary, my expertise as a front-end developer extends <strong>beyond</strong> mere coding proficiency. It encompasses a holistic approach to <strong>design</strong> and <strong>development</strong>, rooted in a deep understanding of user behavior and an unwavering commitment to <strong>excellence</strong>. With a proven track record of success and a <strong>passion</strong> for innovation, I am poised to make a <strong>meaningful</strong> impact on any project I undertake.</p>
 }
 
 const tags = ["#all", "#javascript", "#python", "#typescript", "#react", "#nextjs", "#angular", "#django"];
@@ -61,11 +61,11 @@ const Projects = () => {
       <section className="portfolio-intro section-width-default w-full flex-centered relative mb-20 lg:mb-40">
         <div className="flex-centered flex-col">
           <h1 className='mb-20 lg:mb-40'>{portfolioIntro.title}</h1>
-          <p>{portfolioIntro.text1}</p>
+          {portfolioIntro.text1}
           <br />
-          <p>{portfolioIntro.text2}</p>
+          {portfolioIntro.text2}
           <br />
-          <p>{portfolioIntro.text3}</p>
+          {portfolioIntro.text3}
         </div>
       </section>
 
