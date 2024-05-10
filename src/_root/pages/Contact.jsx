@@ -6,6 +6,8 @@ import { SiGithub, SiWhatsapp } from "react-icons/si";
 
 import { socialMedia } from './Home'
 
+import meHeader from '../../assets/images/me05.jpg'
+
 import emailIcon from '../../assets/icons/email.svg'
 import phoneIcon1 from '../../assets/icons/phone-01.svg'
 import phoneIcon2 from '../../assets/icons/phone02.svg'
@@ -15,7 +17,7 @@ import handIcon from '../../assets/icons/hand.svg'
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
-  
+
   const handleOnSubmit = (e) => {
     const publicKey = process.env.EMAILJS_PUBLIC_KEY
     const serviceId = process.env.EMAILJS_SERVICE_ID
@@ -81,7 +83,7 @@ const Contact = () => {
           </div>
 
           <div className="form-container w-full lg:w-1/2 h-full">
-            <form onSubmit={handleOnSubmit} className='flex flex-col justify-between absolute left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:top-64 bg-light-1 dark:bg-dark-3 w-[376px] h-[654px] lg:w-[476px] lg:h-[754px] p-10' action="">
+            {/* <form onSubmit={handleOnSubmit} className='flex flex-col justify-between absolute left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:top-64 bg-light-1 dark:bg-dark-3 w-[376px] h-[654px] lg:w-[476px] lg:h-[754px] p-10'>
               <h3>Send me a message</h3>
               <fieldset>
                 <label htmlFor="from_name">Your name</label>
@@ -104,7 +106,10 @@ const Contact = () => {
               </fieldset>
               {stateMessage && <span>{stateMessage}</span>}
               <button className='btn small blue' type='submit' disabled={isSubmitting} >Send</button>
-            </form>
+            </form> */}
+            <figure className="absolute left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:top-64 w-[376px] h-[654px] lg:w-[476px] lg:h-[754px]">
+              <img className='object-cover w-full h-full rounded-md drop-shadow-2xl' src={meHeader} alt="paulo reizinho" />
+            </figure>
           </div>
         </div>
       </header>

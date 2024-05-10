@@ -50,7 +50,7 @@ export const projects = [
     title: "Portfolio 2022",
     creator: "Paulo Reizinho",
     myContribution: "100%",
-    text1: "",
+    text1: "The last version of my portfolio website, built with a ton of creativity with a clean UI and fluid UX. The design was created with with Figma and the website implementation was done with NextJS.",
     text2: "",
     techs: ["React.js", "TailwindCSS"],
     link: "https://pauloreizinho.vercel.app/",

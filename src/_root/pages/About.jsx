@@ -173,7 +173,7 @@ const About = () => {
         <div className="clipped-bg shape2 z-10" />
         <div className="clipped-bg shape3 z-10" />
         <div className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]">
-          <img className='object-cover lg:max-w-[450px] lg:h-[580px] rounded-xl' src={header.image} alt={header.alt} />
+          <img className='object-cover lg:max-w-[450px] lg:h-[580px] rounded-xl drop-shadow-lg' src={header.image} alt={header.alt} />
         </div>
       </header>
 
@@ -189,7 +189,7 @@ const About = () => {
           <div className="clipped-bg third" />
           <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4 z-10 py-10 lg:py-20">
             <div className="col-span-1 lg:col-span-2">
-              <img className='object-cover w-[480px] h-[480px]' src={aboutMe.image} alt={aboutMe.alt} />
+              <img className='object-cover w-[480px] h-[480px] drop-shadow-lg' src={aboutMe.image} alt={aboutMe.alt} />
             </div>
             <div className="col-span-1 lg:col-span-4 ml-10">
               <div className="flex justify-between">
@@ -245,7 +245,7 @@ const About = () => {
                 </div>
               </div>
               <div className="w-[350px] h-[480px] my-10 lg:my-20">
-                <img className='object-cover max-w-[350px] h-[480px]' src={contactMe.image} alt={contactMe.alt} />
+                <img className='object-cover max-w-[350px] h-[480px] drop-shadow-lg' src={contactMe.image} alt={contactMe.alt} />
               </div>
             </div>
           </div>

@@ -82,8 +82,8 @@ const Home = () => {
                   imgSrc={project.image}
                   imgAlt={project.alt}
                   title={project.title}
-                  description1={"This is an exploration of font sizing and optimal  character limits per line—because you know, there is a limit. Each line, except the first, aims for a character length between ~70 and ~75 characters. "}
-                  description2={"This is an exploration of font sizing and optimal  character limits per line—because you know, there is a limit. Each line, except the first, aims for a character length between ~70 and ~75 characters. "}
+                  description1={project.text1}
+                  description2=""
                   variant={project.class}
                   link={project.link}
                   github={project.github}

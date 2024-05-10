@@ -57,7 +57,7 @@ button {
     position: relative;
     border: none;
     transition: all 0.2s ease;
-    @apply text-xl font-bold px-6 py-4 mx-1 lg:mx-4 lg:px-16 lg:py-5 rounded-lg;
+    @apply text-xl font-bold px-6 py-4 mx-1 lg:mx-4 lg:px-16 lg:py-5 rounded-lg hover:drop-shadow-xl drop-shadow-lg active:drop-shadow-md;
   
     &.social {
       @apply p-5 lg:p-6;

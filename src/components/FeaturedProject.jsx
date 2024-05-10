@@ -6,7 +6,7 @@ const FeaturedProject = ({ imgSrc, imgAlt, title, description1, description2, va
             <figure className="row-span-2 lg:col-span-2 m-[-16px]">
                 <img className='object-cover object-left-top w-full h-[320px] lg:h-[420px]' src={imgSrc} alt={imgAlt} />
             </figure>
-            <div className="info row-span-3 lg:col-span-4 lg:mx-6">
+            <div className="info row-span-3 lg:col-span-4 lg:mx-6 flex flex-col justify-between h-full">
                 <h2 className="mb-6">{title}</h2>
                 <p>{description1}</p>
                 <br />
