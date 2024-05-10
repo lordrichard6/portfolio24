@@ -1,9 +1,5 @@
-import { FaReact } from "react-icons/fa";
-import { TbBrandThreejs } from "react-icons/tb";
-import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla, SiMongodb } from "react-icons/si";
-
 import portfolio22 from '../assets/images/projects/portfolio23.png'
-import angryFish from '../assets/images/projects/angryfish.jpg'
+import angryFish from '../assets/images/projects/angryfish.png'
 import thinkBig from '../assets/images/projects/thinkbig.png'
 import fastRent from '../assets/images/projects/fastrent.png'
 import fahrerzentrale from '../assets/images/projects/fahrezentrale.png'
@@ -62,7 +58,7 @@ export const projects = [
     // icon: [<FaReact key={1} />],
     type: 'personal',
     date: '2022/06',
-    featured: true,
+    featured: false,
     cardId: "card22",
     tags: ['#react', '#tailwind'],
     hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
@@ -311,33 +307,33 @@ export const projects = [
       class: "variant-02",
       btnColor: "blue"
     },
-    {
-      image: skytours,
-      alt: "world tours website",
-      title: "Skytours",
-      creator: "Paulo Reizinho",
-      myContribution: "Complete",
-      text: ["COMING SOON!"],
+    // {
+      // image: skytours,
+      // alt: "world tours website",
+      // title: "Skytours",
+      // creator: "Paulo Reizinho",
+      // myContribution: "Complete",
+      // text: ["COMING SOON!"],
       // text: [
       //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
       //   "Sit nulla est ex deserunt exercitation anim occaecat.",
       //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
       // ],
-      shortText: "In this captivating web development project, I created an immersive and visually stunning website for a tour company using React. The website serves as a captivating platform that showcases the company's extraordinary travel experiences, enticing users to embark on unforgettable journeys.",
-      techs: ["ReactJS","SASS", "HTML"],
-      link: "https://reizinho-skytours.netlify.com/",
-      github: "https://github.com/lordrichard6/skytours",
-    //   icon: [<FaReact key={0}/>],
-      type: 'personal',
-      date: '2021/04',
-      featured: false,
-      cardId: "card9",
-      tags: ['#reactjs'],
-      hiddenTags: ['#all','#react', "#javascript"],
-      project_type:"",
-      class: "variant-01",
-      btnColor: "pink"
-    },
+      // shortText: "In this captivating web development project, I created an immersive and visually stunning website for a tour company using React. The website serves as a captivating platform that showcases the company's extraordinary travel experiences, enticing users to embark on unforgettable journeys.",
+      // techs: ["ReactJS","SASS", "HTML"],
+      // link: "https://reizinho-skytours.netlify.com/",
+      // github: "https://github.com/lordrichard6/skytours",
+      //   icon: [<FaReact key={0}/>],
+    //   type: 'personal',
+    //   date: '2021/04',
+    //   featured: false,
+    //   cardId: "card9",
+    //   tags: ['#reactjs'],
+    //   hiddenTags: ['#all','#react', "#javascript"],
+    //   project_type:"",
+    //   class: "variant-01",
+    //   btnColor: "pink"
+    // },
     {
       image: hulu,
       alt: "movie streaming platform hulu",
@@ -389,8 +385,8 @@ export const projects = [
       tags: ['#nextjs', '#typescript'],
       hiddenTags: ['#all','#nextjs', '#typescript', "#javascript"],
       project_type:"",
-      class: "variant-02",
-      btnColor: "blue"
+      class: "variant-01",
+      btnColor: "pink"
     },
     // {
     //   image: "/projects/sphere.png",
@@ -536,8 +532,8 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: "variant-01",
-      btnColor: "pink"
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
       image: protier,
@@ -563,8 +559,8 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: "variant-02",
-      btnColor: "blue"
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
       image: bezahlbare,
@@ -590,8 +586,8 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: "variant-01",
-      btnColor: "pink"
+      class: "variant-02",
+      btnColor: "blue"
     },
     {
       image: feinheit,
@@ -617,8 +613,8 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: "variant-02",
-      btnColor: "blue"
+      class: "variant-01",
+      btnColor: "pink"
     },
     {
       image: fcz,
@@ -644,8 +640,8 @@ export const projects = [
       tags: ['#angular', '#django'],
       hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
       project_type:"",
-      class: "variant-01",
-      btnColor: "pink"
+      class: "variant-02",
+      btnColor: "blue"
     },
   ];
   

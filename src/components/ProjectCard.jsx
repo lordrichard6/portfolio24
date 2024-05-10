@@ -2,11 +2,11 @@ import { SiGithub } from "react-icons/si";
 
 const ProjectCard = ({ tags, title, imgSrc, imgAlt, text1, text2, variant, github, link, btn, techs }) => {
     return (
-        <article className={`project flex-centered w-screen ${variant}`}>
+        <article className={`project flex-centered w-screen min-h-[578px] ${variant}`}>
             <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4">
 
-                <div className="col-span-1 lg:col-span-2 my-10">
-                    <img className='object-cover rounded w-full lg:w-[480px] h-[480px] lg:h-[480px]' src={imgSrc} alt={imgAlt} />
+                <div className="col-span-1 lg:col-span-2 lg:my-10 relative scale-[1.8] lg:scale-100 right-32 w-full h-[480px] lg:w-[480px] lg:hover:scale-[2] lg:hover:translate-x-40 transition ease-in-out duration-500 delay-150 cursor-zoom-in">
+                    <img className='absolute object-contain rounded h-full w-[680px]' src={imgSrc} alt={imgAlt} />
                 </div>
 
                 <div className="col-span-1 lg:col-span-4 h-full flex flex-col justify-between lg:my-10">
