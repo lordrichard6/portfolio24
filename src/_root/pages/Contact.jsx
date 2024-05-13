@@ -15,36 +15,38 @@ import homeIcon from '../../assets/icons/home.svg'
 import handIcon from '../../assets/icons/hand.svg'
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [stateMessage, setStateMessage] = useState(null);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [stateMessage, setStateMessage] = useState(null);
 
-  const handleOnSubmit = (e) => {
-    const publicKey = process.env.EMAILJS_PUBLIC_KEY
-    const serviceId = process.env.EMAILJS_SERVICE_ID
-    const templateId = process.env.EMAILJS_TEMPLATE_ID
+  // FORM DOESN'T WORK TRY TO FIX LATER
+  
+  // const handleOnSubmit = (e) => {
+  //   const publicKey = process.env.EMAILJS_PUBLIC_KEY
+  //   const serviceId = process.env.EMAILJS_SERVICE_ID
+  //   const templateId = process.env.EMAILJS_TEMPLATE_ID
 
-    e.persist();
-    e.preventDefault();
-    setIsSubmitting(true);
-    emailjs.sendForm(serviceId, templateId, e.target, publicKey)
-      .then((result) => {
-        setStateMessage('Message sent!');
-        setIsSubmitting(false);
-        console.log(result.text);
-        setTimeout(() => {
-          setStateMessage(null);
-        }, 5000); // hide message after 5 seconds
+  //   e.persist();
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   emailjs.sendForm(serviceId, templateId, e.target, publicKey)
+  //     .then((result) => {
+  //       setStateMessage('Message sent!');
+  //       setIsSubmitting(false);
+  //       console.log(result.text);
+  //       setTimeout(() => {
+  //         setStateMessage(null);
+  //       }, 5000); // hide message after 5 seconds
 
-      }, (error) => {
-        setStateMessage('Something went wrong, please try again later');
-        console.log(error.text);
-        setIsSubmitting(false);
-        setTimeout(() => {
-          setStateMessage(null);
-        }, 5000); // hide message after 5 seconds
-      });
-    e.target.reset()
-  };
+  //     }, (error) => {
+  //       setStateMessage('Something went wrong, please try again later');
+  //       console.log(error.text);
+  //       setIsSubmitting(false);
+  //       setTimeout(() => {
+  //         setStateMessage(null);
+  //       }, 5000); // hide message after 5 seconds
+  //     });
+  //   e.target.reset()
+  // };
 
   return (
     <>

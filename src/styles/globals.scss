@@ -1001,6 +1001,10 @@ html {
     color: transparent;
     -webkit-text-stroke: 2px var(--black-white);
     text-stroke: 2px var(--black-white);
+    @media (max-width: 1024px) {
+      -webkit-text-stroke: 1px var(--black-white);
+      text-stroke: 1px var(--black-white);
+    }
   }
 
   .clipped-bg {
@@ -1060,12 +1064,28 @@ html {
     clip-path: circle(10.2% at 86% 35%);
     background-attachment: fixed;
     background-image: var(--green-radial-bg2);
-    @apply bg-cover absolute w-screen h-full z-0 blur-sm;
+
+    @media (max-width: 1024px) {
+      clip-path: circle(15% at 86% 25%);
+    }
+    @apply bg-cover absolute w-screen h-full opacity-100 z-10;
     &.second {
       clip-path: circle(15.5% at 2% 66%);
+      @media (max-width: 1024px) {
+        clip-path: circle(10% at 10% 46%);
+      }
     }
     &.third {
       clip-path: circle(19.5% at 40% 69%);
+    }
+  }
+  .title {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--black-white);
+    text-stroke: 2px var(--black-white);
+    @media (max-width: 1024px) {
+      -webkit-text-stroke: 1px var(--black-white);
+      text-stroke: 1px var(--black-white);
     }
   }
 }
@@ -1091,7 +1111,7 @@ html {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    
+
     img {
       @apply w-full h-full absolute transition ease-in-out duration-300 delay-150;
     }
@@ -1110,7 +1130,6 @@ html {
           }
         }
       }
-
 
       figure:hover {
         img {
@@ -1190,6 +1209,12 @@ html {
   }
 }
 
+.employers {
+  img {
+    @apply h-40 hover:scale-125 transition ease-in-out duration-300 delay-150;
+  }
+}
+
 .work-together {
   background-image: var(--blue-radial-bg3);
   .clipped-bg {
@@ -1247,7 +1272,8 @@ html {
     label {
       @apply text-base lg:text-lg;
     }
-    input, textarea {
+    input,
+    textarea {
       outline: 0;
       @apply bg-[#E0F1F1] dark:bg-[#629a9a] w-full py-2 px-4 lg:py-4 lg:px-6;
       &::placeholder {

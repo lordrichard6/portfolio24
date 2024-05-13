@@ -1,8 +1,10 @@
 import SideScroller from '../../components/SideScroller'
 
-import { FaReact, FaAngular, FaVuejs, FaFigma   } from "react-icons/fa";
+import { FaReact, FaAngular, FaVuejs, FaFigma } from "react-icons/fa";
 import { SiNextdotjs, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
 import { DiGoogleAnalytics } from "react-icons/di";
+
+import SkillCard from '../../components/SkillCard';
 
 import meta from '/src/assets/images/meta-Logo.png'
 import google from '/src/assets/images/google-logo.png'
@@ -10,10 +12,12 @@ import coursera from '/src/assets/images/coursera-logo.png'
 import udemy from '/src/assets/images/udemy-logo.png'
 import freecodecamp from '/src/assets/images/freecodecamp-logo.png'
 import youtube from '/src/assets/images/youtube-logo.png'
-import SkillCard from '../../components/SkillCard';
+import feinheit from '/src/assets/images/feinheit.png';
+import pickwings from '/src/assets/images/pickwings.png';
 
 import meHeader from '../../assets/images/me03.jpg'
 import meAbout from '../../assets/images/me02.jpg'
+import meAbout02 from '../../assets/images/me04.jpg'
 import meContact from '../../assets/images/me01.jpg'
 import dev01 from '../../assets/icons/front-01.svg'
 import dev02 from '../../assets/icons/front-02.svg'
@@ -35,11 +39,17 @@ const learnTitle = "Learning with the best!"
 
 const aboutMe = {
   title: "Hi, I’m Paulo Reizinho",
-  text_01: "As a Google Ads specialist, I help ambitious companies get the most out of Google Ads. I work for a select number of clients and am responsible for over €1,500,000 per month in ad spend.",
-  text_02: "Over the years, I have had the opportunity to work on more than 100 Google Ads accounts. Often challenging accounts from great names, including Weight Watchers, Louwman, Harley Davidson, KPMG, Schoonenberg, and more.",
-  text_03: "I also provide Google Ads courses and 1-on-1 coaching sessions. In these, I share my knowledge with novice to very advanced Google Ads advertisers. This way, they learn the intricacies of the business.",
-  image: meAbout,
-  alt: "my picture"
+  text_01: <p>I am a <strong>frontend developer</strong>, <strong>UX/UI designer</strong> and a <strong>digital marketing</strong> enthusiast who is thorough in his profession. In the evenings and weekends I am an adventurer and bon vivant.</p>,
+  text_02: <p>I was born and raised in <strong>Portugal</strong> but ambition and the love for cheese brought me to <strong>Switzerland</strong>, more specifically in <strong>Zurich</strong>. I have a degree in Administration, accounting experience, sales experience and work in gastro and transportation fields but those who know me know that I have had a <strong>great passion</strong> for everything <strong>digital</strong> from childhood on.</p>,
+  text_03: <p>I had <strong>no experience</strong> whatsoever in coding, design, online marketing, and everything that came with <strong>entrepreneurship</strong>, <strong>ambition</strong> and <strong>determination</strong>. However, everything could be found on the Internet and in books, so <strong>I taught myself</strong>.</p>,
+  text_04: <p>I most enjoy building <strong>software</strong> and <strong>websites</strong> in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. I'm passionate about <strong>cutting-edge</strong>, pixel-perfect, <strong>beautiful</strong> interfaces and intuitively implemented UX.</p>,
+  text_05: <p>National and international customers can rely on me for <strong>design</strong>, <strong>implementation</strong> and <strong>management</strong> of their digital products. With development technologies such as <strong>React</strong>, <strong>Angular</strong> or <strong>Vue</strong>, backing my designs with <strong>Figma</strong>, <strong>sketch</strong> and <strong>photoshop</strong> and on the marketing zone reach a <strong>strategy</strong> to make your product known to the masses.</p>,
+  text_06: <p>When I’m not at the computer, I’m usually at the <strong>gym</strong>, <strong>reading</strong>, <strong>biking</strong> around or just <strong>hiking</strong> around the beautiful swiss alps.</p>,
+  image1: meAbout,
+  alt1: "my picture",
+  image2: meAbout02,
+  alt2: "my picture",
+  quote: <i>“You are what you do, not what you say you’ll do.”</i>
 }
 
 const learningPartners = [
@@ -126,8 +136,8 @@ const skillCards = [
     ],
     techs: [
       <FaFigma className='text-rose-600 dark:text-rose-400' />,
-      <SiAdobephotoshop  className='text-sky-900 dark:text-sky-400' />,
-      <SiAdobeillustrator  className='text-yellow-600 dark:text-yellow-300' />,
+      <SiAdobephotoshop className='text-sky-900 dark:text-sky-400' />,
+      <SiAdobeillustrator className='text-yellow-600 dark:text-yellow-300' />,
     ]
   },
   {
@@ -152,6 +162,18 @@ const skillCards = [
     ]
   },
 ]
+
+const employers = {
+  title : "I'm proud to have collaborated with some awesome companies",
+  company1: "Feinheit",
+  alt1: "feinheit logo",
+  img1: feinheit,
+  link1: "https://feinheit.ch/",
+  company2: "Pickwings",
+  alt2: "pickwings logo",
+  img2: pickwings,
+  link2: "https://pickwings.ch/",
+}
 
 const contactMe = {
   title: "Lets work together",
@@ -183,24 +205,43 @@ const About = () => {
       </section>
 
       <section className='about-intro flex-centered relative mb-40'>
-        <div className="bg-container flex-centered w-screen">
+        <div className="bg-container flex-centered w-screen z-0">
           <div className="clipped-bg" />
           <div className="clipped-bg second" />
           <div className="clipped-bg third" />
+          <div className="mt-16 lg:mt-0 mb-[20rem] lg:mb-40">
+            <h1 className='absolute z-0 blur-sm leading-relaxed lg:leading-none'>{aboutMe.quote}  - Carl Jung</h1>
+            <h1 className='absolute z-0 leading-relaxed lg:leading-none'>{aboutMe.quote}  - Carl Jung</h1>
+            <h1 className='title absolute z-40 leading-relaxed lg:leading-none'>{aboutMe.quote}  - Carl Jung</h1>
+          </div>
           <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4 z-10 py-10 lg:py-20">
-            <div className="col-span-1 lg:col-span-2">
-              <img className='object-cover w-[480px] h-[480px] drop-shadow-lg' src={aboutMe.image} alt={aboutMe.alt} />
-            </div>
-            <div className="col-span-1 lg:col-span-4 ml-10">
+            <figure className="col-span-1 lg:col-span-2">
+              <img className='object-cover w-[480px] h-[480px] drop-shadow-lg' src={aboutMe.image1} alt={aboutMe.alt1} />
+            </figure>
+            <div className="col-span-1 lg:col-span-4 lg:ml-10 lg:mb-[15rem]">
               <div className="flex justify-between">
                 <h3 className='mb-6'>{aboutMe.title}</h3>
               </div>
-              <p>{aboutMe.text_01}</p>
+              {aboutMe.text_01}
               <br />
-              <p>{aboutMe.text_02}</p>
+              {aboutMe.text_02}
               <br />
-              <p>{aboutMe.text_03}</p>
+              {aboutMe.text_03}
             </div>
+            {/* <div className="relative col-span-6 mb-20">
+              <h1 className='absolute bottom-0 z-0'><i>“You are what you do, not what you say you’ll do.”</i>  - Carl Jung</h1>
+              <h1 className='title absolute bottom-0 z-40'><i>“You are what you do, not what you say you’ll do.”</i>  - Carl Jung</h1>
+            </div> */}
+            <div className="col-span-1 lg:col-span-4 lg:ml-10 mt-[20rem] lg:mt-[15rem]">
+              {aboutMe.text_04}
+              <br />
+              {aboutMe.text_05}
+              <br />
+              {aboutMe.text_06}
+            </div>
+            <figure className="col-span-1 lg:col-span-2 mt-10 lg:mt-[15rem]">
+              <img className='object-cover w-[480px] h-[480px] drop-shadow-lg' src={aboutMe.image2} alt={aboutMe.alt2} />
+            </figure>
           </div>
         </div>
       </section>
@@ -208,7 +249,7 @@ const About = () => {
       <section className='skills-section section-width-default flex-centered relative mb-20'>
         <div className="flex-centered flex-col">
           <h1 className='mb-20'>{skillsSection.title}</h1>
-          <div style={{perspective: '1000px'}} className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-16">
+          <div style={{ perspective: '1000px' }} className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-16">
             {skillCards.map((item) => {
               return (
                 <SkillCard
@@ -230,6 +271,15 @@ const About = () => {
             })}
           </div>
         </div>
+      </section>
+
+      <section className="employers relative flex-centered flex-col w-full my-20">
+        <h2>{employers.title}</h2>
+            <figure className='dark:invert flex my-10'>
+              <a href={employers.link1}><img src={employers.img1} alt={employers.alt1} /></a>
+              <a href={employers.link1}><img src={employers.img2} alt={employers.alt2} /></a>
+            </figure>
+        
       </section>
 
       <section className='work-together w-full flex-centered relative'>
