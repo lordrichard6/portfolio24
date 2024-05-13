@@ -248,7 +248,7 @@ const About = () => {
 
       <section className='skills-section section-width-default flex-centered relative mb-20'>
         <div className="flex-centered flex-col">
-          <h1 className='mb-20'>{skillsSection.title}</h1>
+          <h1 className='mb-20 text-center'>{skillsSection.title}</h1>
           <div style={{ perspective: '1000px' }} className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-16">
             {skillCards.map((item) => {
               return (
@@ -273,9 +273,9 @@ const About = () => {
         </div>
       </section>
 
-      <section className="employers relative flex-centered flex-col w-full my-20">
-        <h2>{employers.title}</h2>
-            <figure className='dark:invert flex my-10'>
+      <section className="employers section-width-default relative flex-centered flex-col w-full my-20">
+        <h2 className='text-center'>{employers.title}</h2>
+            <figure className='dark:invert flex flex-col lg:flex-row my-10'>
               <a href={employers.link1}><img src={employers.img1} alt={employers.alt1} /></a>
               <a href={employers.link1}><img src={employers.img2} alt={employers.alt2} /></a>
             </figure>
