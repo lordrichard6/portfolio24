@@ -362,7 +362,7 @@ export const projects = [
       creator: "Feinheit",
       myContribution: "Small Front-end fixes and webmaster support",
       text1: "Limmatstadt AG is a regional business promotion organisation connecting the entire region along the Limmat regardless of political boundaries and structures. They network business, politics and society through commitment, services and communication platforms. They strengthen the image of the Limmatstadt in its entirety and diversity.",
-      text2: "As this project was already developed I just added support as webmaster through the django cms",
+      text2: "As this project was already developed I just added support as webmaster through the django cms and some front-end changes.",
       techs: ["Angular", "Django"],
       link: "https://www.limmatstadt.ch/",
       github: "",

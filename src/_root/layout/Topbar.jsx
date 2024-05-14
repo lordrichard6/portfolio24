@@ -46,7 +46,7 @@ const Topbar = ({ toggle }) => {
         <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30 transition duration-300 ease-in-out`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
                 <div className="">
-                    <img className='w-10 invert dark:invert-0' src={logo} alt="logo paulo reizinho" />
+                    <a href="/"><img className='w-10 brightness-0 dark:brightness-100' src={logo} alt="logo paulo reizinho" /></a>
                 </div>
                 <div className="lg:flex z-40 hidden ">
                     <ul className="navigation-items flex">

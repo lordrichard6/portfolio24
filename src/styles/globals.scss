@@ -603,9 +603,7 @@ html {
 // WHO AM I
 .who-am-i {
   .clipped-bg {
-    // background-image: url("/src/assets/images/test-light.jpg");
     background-image: var(--pink-stained-glass-bg);
-    // clip-path: polygon(100% 20%, 100% 60%, 0 80%, 0 40%);
     clip-path: circle(33.3% at 93% 49%);
     -webkit-clip-path: circle(33.3% at 93% 49%);
     background-attachment: fixed;
@@ -613,13 +611,6 @@ html {
     @apply bg-cover bg-center absolute w-screen h-full z-0;
     &.second {
       clip-path: circle(23.4% at 5% 63%);
-    }
-  }
-}
-.dark {
-  .who-am-i {
-    .clipped-bg {
-      // background-image: url("/src/assets/images/test-dark.jpg");
     }
   }
 }
