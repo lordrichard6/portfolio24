@@ -63,8 +63,8 @@ export const projects = [
     tags: ['#react', '#tailwind', "#typescript"],
     hiddenTags: ['#all','#react', '#tailwind', "#typescript"],
     project_type:"Restaurant Website",
-    class: "variant-01",
-    btnColor: "pink"
+    class: "variant-02",
+    btnColor: "blue"
   },
   {
     image: portfolio22,
