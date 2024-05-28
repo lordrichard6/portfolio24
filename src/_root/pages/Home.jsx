@@ -33,16 +33,13 @@ const Home = () => {
             className='z-10 w-full sm:w-3/4 lg:w-[60%]'
             initial={{
               opacity: 0,
-              y: -50
+              y: -150
             }}
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
                 duration: 2,
-                type: "spring",
-                damping: 5,
-                stiffness: 50
               }
             }}
             viewport={{ once: true }}
