@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-
-import { FaReact, FaAngular, FaVuejs } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
 
 import arrowFlip_1 from '../assets/icons/turn-arrow-01.svg'
 import arrowFlip_2 from '../assets/icons/turn-arrow-02.svg'

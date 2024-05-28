@@ -1,4 +1,4 @@
-import React from 'react'
+import { motion } from "framer-motion";
 
 import { projects } from '../../constants'
 import SignatureComponent from '../../components/signature'
@@ -29,9 +29,26 @@ const Home = () => {
     <>
       <header id="top" className='min-h-screen relative flex justify-center items-center mb-20 lg:mb-40'>
         <div className="section-width-default flex-centered relative">
-          <figure className='z-10 w-full sm:w-3/4 lg:w-[60%] '>
+          <motion.figure 
+            className='z-10 w-full sm:w-3/4 lg:w-[60%]'
+            initial={{
+              opacity: 0,
+              y: -50
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 2,
+                type: "spring",
+                damping: 5,
+                stiffness: 50
+              }
+            }}
+            viewport={{ once: true }}
+          >
             <img src={armsCrossed} alt="paulo reizinho formal" />
-          </figure>
+          </motion.figure>
           <div className="blob-container hidden lg:contents z-0">
             <div className="blobs">
               <div className="blob a">a</div>
@@ -44,20 +61,113 @@ const Home = () => {
       </header>
 
       <section className="who-am-i section-width-default min-h-screen w-full flex-centered relative mb-20 lg:mb-40">
-        <div className="clipped-bg" />
-        <div className="clipped-bg second" />
+        <motion.div 
+          className="clipped-bg" 
+          initial={{
+            opacity: 0,
+            x: 150,
+
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, 
+            transition: {
+              duration: 1.2
+            }
+          }}
+          viewport={{ once: true }}
+        />
+        <motion.div 
+          className="clipped-bg second" 
+          initial={{
+            opacity: 0,
+            x: -150,
+
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, 
+            transition: {
+              duration: 1.5
+            }
+          }}
+          viewport={{ once: true }}
+        />
         <div className="z-10">
           <h1 className='mb-10 lg:mb-20'>{whoAmI.title}</h1>
           <div className="flex flex-col-reverse lg:flex-row mb-10 lg:mb-20">
             <div className="grid gap-2">
-              <h2>{whoAmI.pos1}</h2>
-              <h2>{whoAmI.pos2}</h2>
-              <h2>{whoAmI.pos3}</h2>
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                  x: -50
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0, 
+                  transition: {
+                    duration: 2
+                  }
+                }}
+                viewport={{ once: true }}
+              >
+                {whoAmI.pos1}
+              </motion.h2>
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                  x: -50
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0, 
+                  transition: {
+                    duration: 2
+                  }
+                }}
+                viewport={{ once: true }}
+              >{whoAmI.pos2}</motion.h2>
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                  x: -50
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0, 
+                  transition: {
+                    duration: 2
+                  }
+                }}
+                viewport={{ once: true }}
+              >{whoAmI.pos3}</motion.h2>
             </div>
-            <figure className="image-hover mx-auto lg:mx-0 relative w-[260px] md:w-[400px] h-[260px] md:h-[400px] hover:cursor-pointer">
+            <motion.figure
+              className="image-hover mx-auto lg:mx-0 relative w-[260px] md:w-[400px] h-[260px] md:h-[400px] hover:cursor-pointer"
+              initial={{
+                opacity: 0,
+                x: 50,
+
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0, 
+                transition: {
+                  duration: 1.5
+                }
+              }}
+              whileHover={{ 
+                scale: 1.2, 
+                transition: {
+                  duration: 0.5
+                }
+              
+              }}
+              viewport={{ once: true }}
+            >
               <img className="object-cover object-center" src={roundSmile} alt="paulo reizinho smiling" />
               <img className="object-cover object-center" src={roundSerious} alt="paulo reizinho serious" />
-            </figure>
+            </motion.figure>
           </div>
           <div className="btns flex-centered">
             <button className='btn primary pink'><a href="/about">Know more</a></button>

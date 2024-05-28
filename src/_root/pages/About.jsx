@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import SideScroller from '../../components/SideScroller'
 
 import { FaReact, FaAngular, FaVuejs, FaFigma } from "react-icons/fa";
@@ -164,7 +165,7 @@ const skillCards = [
 ]
 
 const employers = {
-  title : "I'm proud to have collaborated with some awesome companies",
+  title: "I'm proud to have collaborated with some awesome companies",
   company1: "Feinheit",
   alt1: "feinheit logo",
   img1: feinheit,
@@ -186,17 +187,68 @@ const About = () => {
 
   return (
     <>
-      <header id="top" className='about-header max-h-screen min-h-screen w-full relative flex-centered flex-col'>
+      <header id="top" className='about-header max-h-screen min-h-screen w-screen relative flex-centered flex-col'>
         <h1 className='massive-text absolute top-[10%] left-[10%] z-10 opacity-20 blur-sm'>About</h1>
-        <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none blur-sm'>{header.title}</h1>
-        <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
-        <h1 className='title absolute z-20 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
-        <div className="clipped-bg shape1 z-10" />
-        <div className="clipped-bg shape2 z-10" />
-        <div className="clipped-bg shape3 z-10" />
-        <div className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]">
-          <img className='object-cover lg:max-w-[450px] lg:h-[580px] rounded-xl drop-shadow-lg' src={header.image} alt={header.alt} />
+        <div className="flex-centered flex-col">
+          <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none blur-sm'>{header.title}</h1>
+          <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
+          <h1 className='title absolute z-20 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
         </div>
+        <motion.div 
+          className="clipped-bg shape1 z-10"
+          initial={{
+            opacity: 0,
+            y: -150,
+            x: 150
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: {
+              duration: 1.5,
+            }
+          }}
+          viewport={{ once: true }} 
+        />
+        <motion.div 
+          className="clipped-bg shape2 z-10"
+          initial={{
+            opacity: 0,
+            x: -150
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1.2,
+            }
+          }}
+          viewport={{ once: true }} 
+        />
+        <motion.div 
+          className="clipped-bg shape3 z-10"
+          initial={{
+            opacity: 0,
+            y: 150,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1.7,
+            }
+          }}
+          viewport={{ once: true }} 
+        />
+        <motion.div
+          className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <img className='object-cover lg:max-w-[450px] lg:h-[580px] rounded-xl drop-shadow-lg' src={header.image} alt={header.alt} />
+        </motion.div>
       </header>
 
       <section className="partners relative flex-centered flex-col w-full my-20">
@@ -275,11 +327,11 @@ const About = () => {
 
       <section className="employers section-width-default relative flex-centered flex-col w-full my-20">
         <h2 className='text-center'>{employers.title}</h2>
-            <figure className='dark:invert flex flex-col lg:flex-row my-10'>
-              <a href={employers.link1}><img src={employers.img1} alt={employers.alt1} /></a>
-              <a href={employers.link1}><img src={employers.img2} alt={employers.alt2} /></a>
-            </figure>
-        
+        <figure className='dark:invert flex flex-col lg:flex-row my-10'>
+          <a href={employers.link1}><img src={employers.img1} alt={employers.alt1} /></a>
+          <a href={employers.link1}><img src={employers.img2} alt={employers.alt2} /></a>
+        </figure>
+
       </section>
 
       <section className='work-together w-full flex-centered relative'>

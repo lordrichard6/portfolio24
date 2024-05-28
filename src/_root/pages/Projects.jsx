@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 import { projects } from '../../constants';
 
@@ -9,7 +10,8 @@ import ProjectCard from '../../components/ProjectCard';
 
 const headerText = {
   title: "Projects",
-  subtitle: "Big ideas don't fall from the sky...",
+  // eslint-disable-next-line react/no-unescaped-entities
+  subtitle: <h2 className='z-10 relative mb-6 lg:mb-20 font-thin'><strong className="font-black">Big ideas</strong> don't fall from the sky...</h2>,
   text: "Explore my portfolio further to discover the range and depth of my projects."
 }
 
@@ -39,20 +41,51 @@ const Projects = () => {
     <>
       <header id="top" className='projects-header max-h-screen min-h-screen w-full relative mb-20 lg:mb-40 flex-centered'>
         <div className="section-width-default grid grid-rows-2 xl:grid-rows-1 content-center">
-          <div className="">
-            <div className="overlapping-title">
-              <span data-text="Aim high"></span>
-              <span data-text="stay humble."></span>
-            </div>
+          <div>
+            <motion.div 
+              className="overlapping-title"
+              initial={{
+                opacity: 0,
+                x: -50
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0, // Slide in to its original position
+                transition: {
+                  duration: 1.2 // Animation duration
+                }
+              }}
+              viewport={{ once: true }}
+            >
+              <span data-text="Aim high" />
+              <span data-text="stay humble." />
+            </motion.div>
             <h1 className='massive-text absolute top-[5%] left-[5%] lg:top-[10%] lg:left-[10%] z-10 opacity-20 blur-sm'>{headerText.title}</h1>
-            <h2 className='z-10 relative mb-6 lg:mb-20'>{headerText.subtitle}</h2>
+            {headerText.subtitle}
             <p className='mb-6 max-w-[600px]'>{headerText.text}</p>
           </div>
-          <div className="relative w-full h-full">
+          <motion.div 
+            className="relative w-full h-full"
+            initial={{
+              opacity: 0,
+              x: 150
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0, // Slide in to its original position
+              transition: {
+                duration: 1.5,
+                type: "spring",
+                damping: 5,
+                stiffness: 100
+              }
+            }}
+            viewport={{ once: true }}
+          >
             <img className='object-cover w-[400px] lg:w-auto h-auto absolute bottom-[-10%] lg:bottom-0 right-0 lg:right-10 z-0' src={macThink} alt="macbook thinkbig project" />
             <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-0 lg:bottom-10 right-16 lg:right-20 z-0' src={iphoneAngry} alt="iphone angry fish project" />
             <img className='object-cover w-[200px] lg:w-auto h-auto absolute bottom-[-5%] lg:bottom-0 right-0 lg:right-0 z-0' src={iphonePortfolio} alt="iphone portfolio project" />
-          </div>
+          </motion.div>
         </div>
       </header>
 
