@@ -1,4 +1,3 @@
-import { useState,useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import RootLayout from './_root/RootLayout'
@@ -10,23 +9,8 @@ import './styles/customs.scss';
 import './styles/variables.scss';
 
 function App() {
-  const [themeMode, setThemeMode] = useState('light')
-
-  const darkTheme = () => {
-    setThemeMode('dark')
-  }
-
-  const lightTheme = () => {
-    setThemeMode('light')
-  }
-
-  useEffect(() => {
-    document.querySelector('html').classList.remove('dark','light')
-    document.querySelector('html').classList.add(themeMode)
-  },[themeMode])
-
   return (
-    <ThemeProvider value={{themeMode, darkTheme,lightTheme}}>
+    <ThemeProvider>
       <main>
         <Routes>
           <Route element={<RootLayout />}>
