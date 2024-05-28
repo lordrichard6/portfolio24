@@ -189,12 +189,10 @@ const About = () => {
     <>
       <header id="top" className='about-header max-h-screen min-h-screen w-screen relative flex-centered flex-col'>
         <h1 className='massive-text absolute top-[10%] left-[10%] z-10 opacity-20 blur-sm'>About</h1>
-        <div className="flex-centered flex-col">
-          <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none blur-sm'>{header.title}</h1>
-          <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
-          <h1 className='title absolute z-20 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
-        </div>
-        <motion.div 
+        <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none blur-sm'>{header.title}</h1>
+        <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
+        <h1 className='title absolute z-20 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
+        <motion.div
           className="clipped-bg shape1 z-10"
           initial={{
             opacity: 0,
@@ -209,9 +207,9 @@ const About = () => {
               duration: 1.5,
             }
           }}
-          viewport={{ once: true }} 
+          viewport={{ once: true }}
         />
-        <motion.div 
+        <motion.div
           className="clipped-bg shape2 z-10"
           initial={{
             opacity: 0,
@@ -224,9 +222,9 @@ const About = () => {
               duration: 1.2,
             }
           }}
-          viewport={{ once: true }} 
+          viewport={{ once: true }}
         />
-        <motion.div 
+        <motion.div
           className="clipped-bg shape3 z-10"
           initial={{
             opacity: 0,
@@ -239,7 +237,7 @@ const About = () => {
               duration: 1.7,
             }
           }}
-          viewport={{ once: true }} 
+          viewport={{ once: true }}
         />
         <motion.div
           className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]"
