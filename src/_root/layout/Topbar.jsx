@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import logo from '../../assets/images/logo_white.png'
+import logoBlack from '../../assets/images/logo_black.png'
 
-import { CgMenuBoxed } from "react-icons/cg";
 import { pageLinks } from "../../constants";
-import { BiDownArrow } from "react-icons/bi";
 import { ThemeSwitch } from "./ThemeSwitch";
 
 const Topbar = ({ toggle }) => {
     const [scrolled, setScrolled] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
     const handleScroll = () => {
@@ -46,7 +46,7 @@ const Topbar = ({ toggle }) => {
         <nav className={`navbar-container ${navbarClasses.join(" ")} absolute top-0 lg:mt-8 py-2 flex justify-center w-screen z-30 transition duration-300 ease-in-out`}>
             <div className="inner-container section-width-default flex justify-between items-center relative">
                 <div className="">
-                    <a href="/"><img className='w-10 brightness-0 dark:brightness-100' src={logo} alt="logo paulo reizinho" /></a>
+                    <a href="/"><img className='w-10 hidden dark:block' src={logo} alt="logo paulo reizinho" /><img className='w-10 block dark:hidden' src={logoBlack} alt="logo paulo reizinho" /></a>
                 </div>
                 <div className="lg:flex z-40 hidden ">
                     <ul className="navigation-items flex">

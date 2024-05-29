@@ -187,20 +187,18 @@ const About = () => {
 
   return (
     <>
-      <header id="top" className='about-header max-h-screen min-h-screen w-screen relative flex-centered flex-col'>
-        <h1 className='massive-text absolute top-[10%] left-[10%] z-10 opacity-20 blur-sm'>About</h1>
+      <header id="top" className='about-header max-h-screen min-h-screen w-screen relative flex-centered flex-col overflow-hidden'>
+        <h1 className='massive-text absolute top-[10%] left-[10%] z-10 opacity-20 blur-sm -rotate-12'>About</h1>
         <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none blur-sm'>{header.title}</h1>
         <h1 className='absolute z-0 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
         <h1 className='title absolute z-20 lg:w-1/2 mx-6 leading-relaxed lg:leading-none'>{header.title}</h1>
         <motion.div
           className="clipped-bg shape1 z-10"
           initial={{
-            opacity: 0,
             y: -150,
             x: 150
           }}
           whileInView={{
-            opacity: 1,
             y: 0,
             x: 0,
             transition: {
@@ -241,8 +239,19 @@ const About = () => {
         />
         <motion.div
           className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]"
-          initial="hidden"
-          whileInView="visible"
+          initial={{
+            opacity: 0,
+            // x: 150, 
+            rotateY: 90
+          }}
+          whileInView={{
+            opacity: 1,
+            // x: 0,
+            rotateY: 0,
+            transition: {
+              duration: 2.7,
+            }
+          }}
           viewport={{ once: true }}
         >
           <img className='object-cover lg:max-w-[450px] lg:h-[580px] rounded-xl drop-shadow-lg' src={header.image} alt={header.alt} />
@@ -256,19 +265,79 @@ const About = () => {
 
       <section className='about-intro flex-centered relative mb-40'>
         <div className="bg-container flex-centered w-screen z-0">
-          <div className="clipped-bg" />
-          <div className="clipped-bg second" />
-          <div className="clipped-bg third" />
+          <motion.div 
+            className="clipped-bg"
+            animate={{ x: 20, y:20 }}
+            transition={{
+              type: 'tween',
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "reverse"
+            }}
+          />
+          <motion.div 
+            className="clipped-bg second" 
+            animate={{ y:20 }}
+            transition={{
+              type: 'tween',
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "reverse"
+            }}
+          />
+          <motion.div 
+            className="clipped-bg third" 
+            animate={{ y:-20 }}
+            transition={{
+              type: 'tween',
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "reverse"
+            }}
+          />
           <div className="mt-16 lg:mt-0 mb-[20rem] lg:mb-40">
             <h1 className='absolute z-0 blur-sm leading-relaxed lg:leading-none'>{aboutMe.quote}  - Carl Jung</h1>
             <h1 className='absolute z-0 leading-relaxed lg:leading-none'>{aboutMe.quote}  - Carl Jung</h1>
             <h1 className='title absolute z-40 leading-relaxed lg:leading-none'>{aboutMe.quote}  - Carl Jung</h1>
           </div>
           <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4 z-10 py-10 lg:py-20">
-            <figure className="col-span-1 lg:col-span-2">
+            <motion.figure 
+              className="col-span-1 lg:col-span-2"
+              initial={{
+                opacity: 0,
+                x: -150
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 1.5,
+                }
+              }}
+              viewport={{ once: true }}
+            >
               <img className='object-cover w-[480px] h-[480px] drop-shadow-lg' src={aboutMe.image1} alt={aboutMe.alt1} />
-            </figure>
-            <div className="col-span-1 lg:col-span-4 lg:ml-10 lg:mb-[15rem]">
+            </motion.figure>
+            <motion.div 
+              className="col-span-1 lg:col-span-4 lg:ml-10 lg:mb-[15rem]"
+              initial={{
+                opacity: 0,
+                x: 150
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 2.5,
+                  type: "spring",
+                  velocity: 2
+                }
+              }}
+              viewport={{ once: true }}
+            >
               <div className="flex justify-between">
                 <h3 className='mb-6'>{aboutMe.title}</h3>
               </div>
@@ -277,21 +346,51 @@ const About = () => {
               {aboutMe.text_02}
               <br />
               {aboutMe.text_03}
-            </div>
+            </motion.div>
             {/* <div className="relative col-span-6 mb-20">
               <h1 className='absolute bottom-0 z-0'><i>“You are what you do, not what you say you’ll do.”</i>  - Carl Jung</h1>
               <h1 className='title absolute bottom-0 z-40'><i>“You are what you do, not what you say you’ll do.”</i>  - Carl Jung</h1>
             </div> */}
-            <div className="col-span-1 lg:col-span-4 lg:ml-10 mt-[20rem] lg:mt-[15rem]">
+            <motion.div 
+              className="col-span-1 lg:col-span-4 lg:ml-10 mt-[20rem] lg:mt-[15rem]"
+              initial={{
+                opacity: 0,
+                x: -150
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 2.1,
+                }
+              }}
+              viewport={{ once: true }}
+            >
               {aboutMe.text_04}
               <br />
               {aboutMe.text_05}
               <br />
               {aboutMe.text_06}
-            </div>
-            <figure className="col-span-1 lg:col-span-2 mt-10 lg:mt-[15rem]">
+            </motion.div>
+            <motion.figure 
+              className="col-span-1 lg:col-span-2 mt-10 lg:mt-[15rem]"
+              initial={{
+                opacity: 0,
+                x: 150
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 1.5,
+                  type: "spring",
+                  velocity: 3
+                }
+              }}
+              viewport={{ once: true }}
+            >
               <img className='object-cover w-[480px] h-[480px] drop-shadow-lg' src={aboutMe.image2} alt={aboutMe.alt2} />
-            </figure>
+            </motion.figure>
           </div>
         </div>
       </section>
@@ -334,7 +433,17 @@ const About = () => {
 
       <section className='work-together w-full flex-centered relative'>
         <div className="flex-centered section-width-default w-screen">
-          <div className="clipped-bg" />
+          <motion.div 
+            className="clipped-bg"
+            hover={{ y:10, x:20 }}
+            transition={{
+              type: 'tween',
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              repeatType: "reverse"
+            }} 
+          />
           <div className="section-width-default flex-centered z-10">
             <div className="h-full flex-centered flex-col-reverse lg:flex-row">
               <div className="flex flex-col justify-between lg:h-[350px] lg:w-[570px]">
