@@ -263,7 +263,7 @@ const About = () => {
         <SideScroller images={learningPartners} speed={8000} />
       </section>
 
-      <section className='about-intro flex-centered relative mb-40'>
+      <section className='about-intro flex-centered relative mb-40 overflow-hidden'>
         <div className="bg-container flex-centered w-screen z-0">
           <motion.div 
             className="clipped-bg"
@@ -431,7 +431,7 @@ const About = () => {
 
       </section>
 
-      <section className='work-together w-full flex-centered relative'>
+      <section className='work-together w-full flex-centered relative overflow-hidden'>
         <div className="flex-centered section-width-default w-screen">
           <motion.div 
             className="clipped-bg"
