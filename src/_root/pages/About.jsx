@@ -435,7 +435,7 @@ const About = () => {
         <div className="flex-centered section-width-default w-screen">
           <motion.div 
             className="clipped-bg"
-            hover={{ y:10, x:20 }}
+            animate={{ y:10, x:20 }}
             transition={{
               type: 'tween',
               duration: 2,
