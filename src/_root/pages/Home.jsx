@@ -27,7 +27,7 @@ export const socialMedia = {
 const Home = () => {
   return (
     <>
-      <header id="top" className='min-h-screen relative flex justify-center items-center mb-20 lg:mb-40 overflow-hidden'>
+      <header id="top" className='min-h-screen relative flex justify-center items-center mb-20 lg:mb-40'>
         <div className="section-width-default flex-centered relative">
           <motion.figure
             className='z-10 w-full sm:w-3/4 lg:w-[60%]'

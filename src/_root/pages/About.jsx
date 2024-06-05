@@ -238,7 +238,7 @@ const About = () => {
           viewport={{ once: true }}
         />
         <motion.div
-          className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-10 lg:absolute bottom-[3%] right-[25%]"
+          className="lg:w-[350px] lg:h-[480px] mx-10 mt-[30rem] z-20 lg:absolute bottom-[3%] right-[25%]"
           initial={{
             opacity: 0,
             // x: 150, 
