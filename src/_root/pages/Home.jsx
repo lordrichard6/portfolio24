@@ -168,7 +168,7 @@ const Home = () => {
               </motion.figure>
             </div>
             <div className="btns flex-centered">
-              <button className='btn primary pink'><a href="/about">Know more</a></button>
+              <button className='btn primary pink'><a href="/about">Know more123</a></button>
               <button className='btn primary social pink'><a target="_blank" href={socialMedia.linkedin}><SlSocialLinkedin /></a></button>
               <button className='btn primary social pink'><a target="_blank" href={socialMedia.instagram}><SlSocialInstagram /></a></button>
             </div>
