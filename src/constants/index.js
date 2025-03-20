@@ -73,7 +73,7 @@ export const projects = [
     title: "FinitoPro",
     creator: "OctoLabs",
     myContribution: "60%",
-    text1: "A business software to manage, small to medium companies, if you have a business, you're probably using Bexio to manage your accounting process, Finito Pro does the same and more for a fraction of the price.",
+    text1: "A business software to manage, small to medium companies, if you have a business, you're probably using Bexio to manage your accounting process, Finito Pro does the same and more for a fraction of the price and a more intuitive design.",
     text2: "No installation required, register for free and test it during 30 days.",
     techs: ["Django", "Angular", "Firebase", "Kubernetes"],
     link: "https://www.finitopro.ch/",
