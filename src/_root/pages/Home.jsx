@@ -12,9 +12,10 @@ import FeaturedProject from '../../components/FeaturedProject';
 
 const whoAmI = {
   title: "Who am I?",
-  pos1: "Front-end Developer",
+  pos1: "FullStack Developer",
   pos2: "UI & UX Designer",
-  pos3: "Digital Marketing Strategist",
+  pos3: "AI Engineer",
+  // pos3: "Digital Marketing Strategist",
 }
 
 export const socialMedia = {

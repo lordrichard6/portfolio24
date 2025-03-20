@@ -2,7 +2,7 @@ import portfolio22 from '../assets/images/projects/portfolio23.png'
 import angryFish from '../assets/images/projects/angryfish.png'
 import thinkBig from '../assets/images/projects/thinkbig.png'
 import fastRent from '../assets/images/projects/fastrent.png'
-import fahrerzentrale from '../assets/images/projects/fahrezentrale.png'
+// import fahrerzentrale from '../assets/images/projects/fahrezentrale.png'
 import pickwings from '../assets/images/projects/pickwings.png'
 import helpinghand from '../assets/images/projects/helping.png'
 import hulu from '../assets/images/projects/hulu.png'
@@ -13,7 +13,8 @@ import protier from '../assets/images/projects/protier.png'
 import bezahlbare from '../assets/images/projects/bezahlbare-Wohnungen.png'
 import feinheit from '../assets/images/projects/feinheit.png'
 import fcz from '../assets/images/projects/fcz.png'
-import littleLemon from '../assets/images/projects/littleLemon.png'
+// import littleLemon from '../assets/images/projects/littleLemon.png'
+import finito from '../assets/images/projects/finito.png'
 
 
 export const pageLinks = [
@@ -45,26 +46,47 @@ export const pageLinks = [
 
 
 export const projects = [
+  // {
+  //   image: littleLemon,
+  //   alt: "Little Lemon Restaurant",
+  //   title: "Little Lemon Restaurant",
+  //   creator: "Paulo Reizinho",
+  //   myContribution: "100%",
+  //   text1: "The final project for the META Font-end course in coursera, design with Figma, developed with React, with Typescript, unit tests with Jest and client-side validation with formik and yup.",
+  //   text2: "",
+  //   techs: ["React.js", "TailwindCSS", "Typescript"],
+  //   link: "https://coursera-little-lemon.vercel.app/",
+  //   github: "https://github.com/lordrichard6/coursera_capstone_proj",
+  //   type: 'personal',
+  //   date: '2024/05',
+  //   featured: false,
+  //   cardId: "card24",
+  //   tags: ['#react', '#tailwind', "#typescript"],
+  //   hiddenTags: ['#all','#react', '#tailwind', "#typescript"],
+  //   project_type:"Restaurant Website",
+  //   class: "variant-02",
+  //   btnColor: "blue"
+  // },
   {
-    image: littleLemon,
-    alt: "Little Lemon Restaurant",
-    title: "Little Lemon Restaurant",
-    creator: "Paulo Reizinho",
-    myContribution: "100%",
-    text1: "The final project for the META Font-end course in coursera, design with Figma, developed with React, with Typescript, unit tests with Jest and client-side validation with formik and yup.",
-    text2: "",
-    techs: ["React.js", "TailwindCSS", "Typescript"],
-    link: "https://coursera-little-lemon.vercel.app/",
-    github: "https://github.com/lordrichard6/coursera_capstone_proj",
+    image: finito,
+    alt: "Finito pro",
+    title: "FinitoPro",
+    creator: "OctoLabs",
+    myContribution: "60%",
+    text1: "A business software to manage, small to medium companies, if you have a business, you're probably using Bexio to manage your accounting process, Finito Pro does the same and more for a fraction of the price.",
+    text2: "No installation required, register for free and test it during 30 days.",
+    techs: ["Django", "Angular", "Firebase", "Kubernetes"],
+    link: "https://www.finitopro.ch/",
+    github: "",
     type: 'personal',
-    date: '2024/05',
-    featured: false,
+    date: '2024/04',
+    featured: true,
     cardId: "card24",
-    tags: ['#react', '#tailwind', "#typescript"],
-    hiddenTags: ['#all','#react', '#tailwind', "#typescript"],
-    project_type:"Restaurant Website",
-    class: "variant-02",
-    btnColor: "blue"
+    tags: ['#django', '#angular', '#docker', '#firebase'],
+    hiddenTags: ['#all', '#python', '#javascript', "#typescript"],
+    project_type: "Webapp",
+    class: "variant-01",
+    btnColor: "pink"
   },
   {
     image: portfolio22,
@@ -79,7 +101,7 @@ export const projects = [
     github: "https://github.com/lordrichard6/portfolio21",
     type: 'personal',
     date: '2022/06',
-    featured: true,
+    featured: false,
     cardId: "card22",
     tags: ['#react', '#tailwind'],
     hiddenTags: ['#all', '#react', '#tailwind', "#javascript"],
@@ -100,14 +122,14 @@ export const projects = [
     link: "https://angry-fish.vercel.app/",
     github: "https://github.com/lordrichard6/angry_fish",
     type: 'personal',
-    date: '2024/04',
-    featured: true,
+    date: '2024/02',
+    featured: false,
     cardId: "card22",
     tags: ['#react', '#tailwind', '#AppWrite'],
     hiddenTags: ['#all', '#react', '#tailwind', "#javascript"],
     project_type: "Social Media App",
-    class: "variant-01",
-    btnColor: "pink"
+    class: "variant-02",
+    btnColor: "blue"
   },
   {
     image: thinkBig,
@@ -127,30 +149,30 @@ export const projects = [
     tags: ['#react', '#tailwind'],
     hiddenTags: ['#all', '#react', '#tailwind', "#javascript"],
     project_type: "",
-    class: "variant-02",
-    btnColor: "blue"
-  },
-  {
-    image: fahrerzentrale,
-    alt: "fahrezentrale homepage",
-    title: "FahrerZentrale",
-    creator: "Pickwings",
-    myContribution: "Front-end, Design and Back-end",
-    text1: "A complex webapp rooted in Django and Angular, a Job platform for drivers of different categories, but with a more minimalist UI and entertaining UX.",
-    text2: "The way it works is by bringing tinder to the job search and make it fun and easy to look for a new job or change the current one. I implemented most of the frontend and created some of the design. I work with a senior engineer and a design company to bring to life this project.",
-    techs: ["Angular", "Django", "Docker"],
-    link: "https://fahrerzentrale.ch/en/landing",
-    github: "",
-    type: 'profissional',
-    date: '2022/06',
-    featured: true,
-    cardId: "card1",
-    tags: ['#angular', '#django', '#docker'],
-    hiddenTags: ['#all', '#angular', '#django', '#docker', "#javascript", "#python"],
-    project_type: "",
     class: "variant-01",
     btnColor: "pink"
   },
+  // {
+  //   image: fahrerzentrale,
+  //   alt: "fahrezentrale homepage",
+  //   title: "FahrerZentrale",
+  //   creator: "Pickwings",
+  //   myContribution: "Front-end, Design and Back-end",
+  //   text1: "A complex webapp rooted in Django and Angular, a Job platform for drivers of different categories, but with a more minimalist UI and entertaining UX.",
+  //   text2: "The way it works is by bringing tinder to the job search and make it fun and easy to look for a new job or change the current one. I implemented most of the frontend and created some of the design. I work with a senior engineer and a design company to bring to life this project.",
+  //   techs: ["Angular", "Django", "Docker"],
+  //   link: "https://fahrerzentrale.ch/en/landing",
+  //   github: "",
+  //   type: 'profissional',
+  //   date: '2022/06',
+  //   featured: true,
+  //   cardId: "card1",
+  //   tags: ['#angular', '#django', '#docker'],
+  //   hiddenTags: ['#all', '#angular', '#django', '#docker', "#javascript", "#python"],
+  //   project_type: "",
+  //   class: "variant-01",
+  //   btnColor: "pink"
+  // },
   {
     image: pickwings,
     alt: "pickwings homepage",
