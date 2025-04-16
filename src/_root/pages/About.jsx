@@ -426,7 +426,7 @@ const About = () => {
         <h2 className='text-center'>{employers.title}</h2>
         <figure className='dark:invert flex flex-col lg:flex-row my-10'>
           <a href={employers.link1}><img src={employers.img1} alt={employers.alt1} /></a>
-          <a href={employers.link1}><img src={employers.img2} alt={employers.alt2} /></a>
+          {/* <a href={employers.link1}><img src={employers.img2} alt={employers.alt2} /></a> */}
         </figure>
 
       </section>
