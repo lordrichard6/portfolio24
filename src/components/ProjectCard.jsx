@@ -1,6 +1,7 @@
 import { SiGithub } from "react-icons/si";
+import PropTypes from 'prop-types';
 
-const ProjectCard = ({ tags, title, imgSrc, imgAlt, text1, text2, variant, github, link, btn, techs }) => {
+const ProjectCard = ({ tags, title, imgSrc, imgAlt, text1, text2, variant, github, link, btn }) => {
     return (
         <article className={`project flex-centered w-screen min-h-[578px] ${variant}`}>
             <div className="section-width-default grid grid-cols-1 lg:grid-cols-6 gap-4">
@@ -19,18 +20,28 @@ const ProjectCard = ({ tags, title, imgSrc, imgAlt, text1, text2, variant, githu
                     <p>{text1}</p>
                     <br />
                     <p>{text2}</p>
-                    {/* <div className="">
-                        {techs.map((tech, i) => <span className="mx-1" key={i}>{tech}</span>)}
-                    </div> */}
                     <div className="w-full flex justify-center lg:justify-end lg:items-end mt-6 mb-20">
-                        <button className={`btn small mr-2 lg:ml-auto ${btn}`}><a href={link} target="_blank">Visit project</a></button>
+                        <button className={`btn small mr-2 lg:ml-auto ${btn}`}><a href={link} target="_blank" rel="noopener noreferrer">Visit project</a></button>
                         {github && (
-                            <button className={`btn small ${btn}`}><a href={github} target="_blank"><SiGithub /></a></button>)}
+                            <button className={`btn small ${btn}`}><a href={github} target="_blank" rel="noopener noreferrer"><SiGithub /></a></button>)}
                     </div>
                 </div>
             </div>
         </article>
     )
 }
+
+ProjectCard.propTypes = {
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    title: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string.isRequired,
+    imgAlt: PropTypes.string.isRequired,
+    text1: PropTypes.string.isRequired,
+    text2: PropTypes.string.isRequired,
+    variant: PropTypes.string.isRequired,
+    github: PropTypes.string,
+    link: PropTypes.string.isRequired,
+    btn: PropTypes.string.isRequired,
+};
 
 export default ProjectCard

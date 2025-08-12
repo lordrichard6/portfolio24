@@ -1,4 +1,5 @@
 import { SiGithub } from "react-icons/si";
+import PropTypes from 'prop-types';
 
 const FeaturedProject = ({ imgSrc, imgAlt, title, description1, description2, variant, link, github }) => {
     return (
@@ -12,14 +13,25 @@ const FeaturedProject = ({ imgSrc, imgAlt, title, description1, description2, va
                 <br />
                 <p>{description2}</p>
                 <div className="w-full row-span-1 flex justify-center lg:justify-end items-end">
-                    <button className='btn small lg:ml-auto pink'><a href={link} target="_blank">Visit project</a></button>
+                    <button className='btn small lg:ml-auto pink'><a href={link} target="_blank" rel="noopener noreferrer">Visit project</a></button>
                     {github && (
-                        <button className='btn small pink mx-4'><a href={github} target="_blank"><SiGithub /></a></button>
+                        <button className='btn small pink mx-4'><a href={github} target="_blank" rel="noopener noreferrer"><SiGithub /></a></button>
                     )}
                 </div>
             </div>
         </article>
     )
 }
+
+FeaturedProject.propTypes = {
+    imgSrc: PropTypes.string.isRequired,
+    imgAlt: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description1: PropTypes.string.isRequired,
+    description2: PropTypes.string,
+    variant: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    github: PropTypes.string,
+};
 
 export default FeaturedProject

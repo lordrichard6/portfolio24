@@ -1,10 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import emailjs from '@emailjs/browser';
-
 import { SlSocialLinkedin, SlSocialInstagram } from "react-icons/sl";
 import { SiGithub, SiWhatsapp } from "react-icons/si";
 
-import { socialMedia } from './Home'
+import { socialMedia } from '../../constants'
 
 import meHeader from '../../assets/images/me05.jpg'
 
@@ -55,8 +52,8 @@ const Contact = () => {
 
           <div className="info-container w-full lg:w-1/2 h-full mb-10 lg:mb-0">
             <div className="mb-10">
-              <h4>Let's get in touch</h4>
-              <h3>Let's talk about you & your challenges</h3>
+              <h4>Let&apos;s get in touch</h4>
+              <h3>Let&apos;s talk about you &amp; your challenges</h3>
             </div>
             <div className="">
               <p><strong>Contact information</strong></p>
@@ -76,10 +73,10 @@ const Contact = () => {
                 <p>Zurich, Switzerland</p>
               </span>
               <div className="flex justify-evenly lg:justify-start mt-6">
-                <button className='btn primary social blue'><a href={socialMedia.github} target="_blank"><SiGithub /></a></button>
-                <button className='btn primary social blue'><a href={socialMedia.instagram} target="_blank"><SlSocialInstagram /></a></button>
-                <button className='btn primary social blue'><a href={socialMedia.linkedin} target="_blank"><SlSocialLinkedin /></a></button>
-                <button className='btn primary social blue'><a href={socialMedia.whatsapp} target="_blank"><SiWhatsapp /></a></button>
+                <button className='btn primary social blue'><a href={socialMedia.github} target="_blank" rel="noopener noreferrer"><SiGithub /></a></button>
+                <button className='btn primary social blue'><a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer"><SlSocialInstagram /></a></button>
+                <button className='btn primary social blue'><a href={socialMedia.linkedin} target="_blank" rel="noopener noreferrer"><SlSocialLinkedin /></a></button>
+                <button className='btn primary social blue'><a href={socialMedia.whatsapp} target="_blank" rel="noopener noreferrer"><SiWhatsapp /></a></button>
               </div>
             </div>
           </div>

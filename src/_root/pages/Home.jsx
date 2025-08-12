@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { projects } from '../../constants'
+import { projects, socialMedia } from '../../constants'
 import SignatureComponent from '../../components/signature'
 import { SlSocialLinkedin, SlSocialInstagram } from "react-icons/sl";
 import { SiGithub } from "react-icons/si";
@@ -16,13 +16,6 @@ const whoAmI = {
   pos2: "UI & UX Designer",
   pos3: "AI Engineer",
   // pos3: "Digital Marketing Strategist",
-}
-
-export const socialMedia = {
-  linkedin: "https://www.linkedin.com/in/pauloreizinho/",
-  instagram: "https://www.instagram.com/paulo_reizinho/",
-  github: "https://github.com/lordrichard6",
-  whatsapp: "https://wa.link/sru6m7"
 }
 
 const Home = () => {
@@ -170,8 +163,8 @@ const Home = () => {
             </div>
             <div className="btns flex-centered">
               <button className='btn primary pink'><a href="/about">Know more</a></button>
-              <button className='btn primary social pink'><a target="_blank" href={socialMedia.linkedin}><SlSocialLinkedin /></a></button>
-              <button className='btn primary social pink'><a target="_blank" href={socialMedia.instagram}><SlSocialInstagram /></a></button>
+              <button className='btn primary social pink'><a target="_blank" rel="noopener noreferrer" href={socialMedia.linkedin}><SlSocialLinkedin /></a></button>
+              <button className='btn primary social pink'><a target="_blank" rel="noopener noreferrer" href={socialMedia.instagram}><SlSocialInstagram /></a></button>
             </div>
           </div>
         </div>
@@ -203,7 +196,7 @@ const Home = () => {
           })}
           <div className="flex-centered mb-10">
             <button className='btn primary pink'><a href="/projects">More projects</a></button>
-            <button className='btn primary social pink'><a href={socialMedia.github} target="_blank"><SiGithub /></a></button>
+            <button className='btn primary social pink'><a href={socialMedia.github} target="_blank" rel="noopener noreferrer"><SiGithub /></a></button>
           </div>
         </div>
       </section>

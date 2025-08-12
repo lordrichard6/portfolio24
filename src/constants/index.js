@@ -3,7 +3,7 @@ import angryFish from '../assets/images/projects/angryfish.png'
 import thinkBig from '../assets/images/projects/thinkbig.png'
 import fastRent from '../assets/images/projects/fastrent.png'
 // import fahrerzentrale from '../assets/images/projects/fahrezentrale.png'
-import pickwings from '../assets/images/projects/pickwings.png'
+// import pickwings from '../assets/images/projects/pickwings.png'
 import helpinghand from '../assets/images/projects/helping.png'
 import hulu from '../assets/images/projects/hulu.png'
 // import skytours from '../assets/images/projects/skytours.png'
@@ -15,6 +15,13 @@ import feinheit from '../assets/images/projects/feinheit.png'
 import fcz from '../assets/images/projects/fcz.png'
 // import littleLemon from '../assets/images/projects/littleLemon.png'
 import finito from '../assets/images/projects/finito.png'
+
+export const socialMedia = {
+  linkedin: "https://www.linkedin.com/in/pauloreizinho/",
+  instagram: "https://www.instagram.com/paulo_reizinho/",
+  github: "https://github.com/lordrichard6",
+  whatsapp: "https://wa.link/sru6m7"
+}
 
 
 export const pageLinks = [

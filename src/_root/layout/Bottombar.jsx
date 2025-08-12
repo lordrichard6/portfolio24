@@ -56,7 +56,7 @@ const Bottombar = () => {
                         <ul>
                             {resources.map((item) => {
                                 return (
-                                    <li key={item.name}><a className="text-lg dark:text-slate-50 hover:font-extrabold" target="_blank" href={item.link}>{item.name}</a></li>
+                                    <li key={item.name}><a className="text-lg dark:text-slate-50 hover:font-extrabold" target="_blank" rel="noopener noreferrer" href={item.link}>{item.name}</a></li>
                                 )
                             })}
                         </ul>

@@ -10,14 +10,13 @@ import ProjectCard from '../../components/ProjectCard';
 
 const headerText = {
   title: "Projects",
-  // eslint-disable-next-line react/no-unescaped-entities
-  subtitle: <h2 className='z-10 relative mb-6 lg:mb-20 font-thin'><strong className="font-black">Big ideas</strong> don't fall from the sky...</h2>,
+  subtitle: <h2 className='z-10 relative mb-6 lg:mb-20 font-thin'><strong className="font-black">Big ideas</strong> don&apos;t fall from the sky...</h2>,
   text: "Explore my portfolio further to discover the range and depth of my projects."
 }
 
 const portfolioIntro = {
   title: "Portfolio",
-  text1: <p>My <strong>commitment</strong> to staying abreast of the latest trends and best practices in front-end development allows me to consistently push the boundaries of what's possible, <strong>creativity</strong> doesn't have limits if you have the drive and the <strong>passion</strong>.</p>,
+  text1: <p>My <strong>commitment</strong> to staying abreast of the latest trends and best practices in front-end development allows me to consistently push the boundaries of what&apos;s possible, <strong>creativity</strong> doesn&apos;t have limits if you have the drive and the <strong>passion</strong>.</p>,
   text2: <p>Having worked with <strong>Angular</strong> and <strong>Django</strong> in professional settings, built personal projects with <strong>React</strong> and <strong>NextJS</strong> always focusing and improving the <strong>UI</strong> and <strong>UX</strong> in each project, this website is one of my latest <strong>achievments</strong>. I possess a good understanding of both <strong>front-end</strong> and <strong>back-end</strong> development, allowing me to create seamless, integrated solutions that <strong>exceed</strong> client <strong>expectations</strong>.</p>,
   text3: <p>In summary, my expertise as a front-end developer extends <strong>beyond</strong> mere coding proficiency. It encompasses a holistic approach to <strong>design</strong> and <strong>development</strong>, rooted in a deep understanding of user behavior and an unwavering commitment to <strong>excellence</strong>. With a proven track record of success and a <strong>passion</strong> for innovation, I am poised to make a <strong>meaningful</strong> impact on any project I undertake.</p>
 }

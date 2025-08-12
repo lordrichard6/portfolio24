@@ -1,6 +1,6 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 
-const ThemeContext = createContext({
+export const ThemeContext = createContext({
     themeMode: "light",
     darkTheme: () => { },
     lightTheme: () => { },
@@ -59,7 +59,3 @@ export const ThemeProvider = ({ children }) => {
         </ThemeContext.Provider>
     );
 };
-
-export default function useTheme() {
-    return useContext(ThemeContext);
-}

@@ -43,7 +43,7 @@ const aboutMe = {
   text_01: <p>I am a <strong>frontend developer</strong>, <strong>UX/UI designer</strong> and a <strong>digital marketing</strong> enthusiast who is thorough in his profession. In the evenings and weekends I am an adventurer and bon vivant.</p>,
   text_02: <p>I was born and raised in <strong>Portugal</strong> but ambition and the love for cheese brought me to <strong>Switzerland</strong>, more specifically in <strong>Zurich</strong>. I have a degree in Administration, accounting experience, sales experience and work in gastro and transportation fields but those who know me know that I have had a <strong>great passion</strong> for everything <strong>digital</strong> from childhood on.</p>,
   text_03: <p>I had <strong>no experience</strong> whatsoever in coding, design, online marketing, and everything that came with <strong>entrepreneurship</strong>, <strong>ambition</strong> and <strong>determination</strong>. However, everything could be found on the Internet and in books, so <strong>I taught myself</strong>.</p>,
-  text_04: <p>I most enjoy building <strong>software</strong> and <strong>websites</strong> in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. I'm passionate about <strong>cutting-edge</strong>, pixel-perfect, <strong>beautiful</strong> interfaces and intuitively implemented UX.</p>,
+  text_04: <p>I most enjoy building <strong>software</strong> and <strong>websites</strong> in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. I&apos;m passionate about <strong>cutting-edge</strong>, pixel-perfect, <strong>beautiful</strong> interfaces and intuitively implemented UX.</p>,
   text_05: <p>National and international customers can rely on me for <strong>design</strong>, <strong>implementation</strong> and <strong>management</strong> of their digital products. With development technologies such as <strong>React</strong>, <strong>Angular</strong> or <strong>Vue</strong>, backing my designs with <strong>Figma</strong>, <strong>sketch</strong> and <strong>photoshop</strong> and on the marketing zone reach a <strong>strategy</strong> to make your product known to the masses.</p>,
   text_06: <p>When I’m not at the computer, I’m usually at the <strong>gym</strong>, <strong>reading</strong>, <strong>biking</strong> around or just <strong>hiking</strong> around the beautiful swiss alps.</p>,
   image1: meAbout,
@@ -113,10 +113,10 @@ const skillCards = [
       "Optimize Performance and Accessibility with the best practices and techniques to optimize website performance."
     ],
     techs: [
-      <FaReact className='text-sky-900 dark:text-sky-400' />,
-      <SiNextdotjs className='text-slate-900 dark:text-slate-100' />,
-      <FaAngular className='text-rose-600 dark:text-rose-400' />,
-      <FaVuejs className='text-green-800 dark:text-green-400' />
+      <FaReact key="react" className='text-sky-900 dark:text-sky-400' />,
+      <SiNextdotjs key="nextjs" className='text-slate-900 dark:text-slate-100' />,
+      <FaAngular key="angular" className='text-rose-600 dark:text-rose-400' />,
+      <FaVuejs key="vue" className='text-green-800 dark:text-green-400' />
     ]
   },
   {
@@ -136,9 +136,9 @@ const skillCards = [
       "Optimize Performance and Accessibility with the best practices and techniques to optimize website performance."
     ],
     techs: [
-      <FaFigma className='text-rose-600 dark:text-rose-400' />,
-      <SiAdobephotoshop className='text-sky-900 dark:text-sky-400' />,
-      <SiAdobeillustrator className='text-yellow-600 dark:text-yellow-300' />,
+      <FaFigma key="figma" className='text-rose-600 dark:text-rose-400' />,
+      <SiAdobephotoshop key="photoshop" className='text-sky-900 dark:text-sky-400' />,
+      <SiAdobeillustrator key="illustrator" className='text-yellow-600 dark:text-yellow-300' />,
     ]
   },
   {
@@ -158,7 +158,7 @@ const skillCards = [
       "Stay Updated on Industry Trends and adapt strategies accordingly to remain competitive."
     ],
     techs: [
-      <DiGoogleAnalytics className='text-yellow-600 dark:text-yellow-300' />,
+      <DiGoogleAnalytics key="analytics" className='text-yellow-600 dark:text-yellow-300' />,
 
     ]
   },

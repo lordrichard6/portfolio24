@@ -1,6 +1,9 @@
+import { useLocation } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { pageLinks } from "../../constants";
 
 const Sidebar = ({ isOpen, toggle }) => {
+    const location = useLocation();
 
     return (
         <nav onClick={toggle} className={`sidebar ${isOpen ? "right-[-65%] sm:right-[-80%]" : "right-[-100%]"} fixed top-0 right-0 w-full h-auto rounded-bl-xl flex flex-col z-30`}>
@@ -23,5 +26,10 @@ const Sidebar = ({ isOpen, toggle }) => {
         </nav>
     )
 }
+
+Sidebar.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    toggle: PropTypes.func.isRequired,
+};
 
 export default Sidebar
